@@ -31,53 +31,41 @@ body {
 }
 
 /* ---------- NAVIGATION (FIXED AT TOP) ---------- */
-.about-nav {
-  position: absolute; /* Anchors it to the very top */
+
+nav {
+  position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
   padding: 30px 5%;
-  z-index: 1000;
-  background: transparent;
+  z-index: 100;
 }
 
-.nav-container {
-  max-width: var(--max-width);
-  margin: 0 auto;
+nav ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-}
-
-.nav-left img {
-  height: 35px;
-}
-
-.nav-right {
-  display: flex;
   gap: 30px;
-  align-items: center;
 }
 
-.nav-right a {
-  text-decoration: none;
+nav li.logo {
+  margin-right: auto;
+}
+nav img {
+  height: 38px;
+}
+
+nav a {
   color: white;
+  text-decoration: none;
   text-transform: uppercase;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
-  opacity: 0.8;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
   transition: var(--transition);
 }
 
-.nav-right li.nav-active a {
+nav a:hover,
+.nav-active a {
   color: var(--gold);
-  opacity: 1;
-  font-weight: 600;
-}
-
-.nav-right a:hover {
-  color: var(--gold);
-  opacity: 1;
 }
 
 .side-bar {
@@ -121,8 +109,10 @@ body {
   color: var(--gold);
   padding-left: 10px;
 }
-
-/* ---------- SIDEBAR OVERLAY ---------- */
+.side-bar a.nav-active {
+  color: #c5a059;
+  font-weight: 600;
+}
 .sidebar-overlay {
   position: fixed;
   top: 0;
@@ -146,7 +136,6 @@ body {
   display: none;
 }
 
-/* Responsive Navbar */
 @media (max-width: 850px) {
   .hideOnMobile {
     display: none;
@@ -160,7 +149,6 @@ body {
     display: none;
   }
 }
-
 /* ---------- HERO SECTION (FIXED SPACING) ---------- */
 .about-hero {
   height: 70vh;
@@ -458,7 +446,7 @@ body {
 
 /* ---------- BLACK FOOTER ---------- */
 .about-footer {
-  padding: 100px 5% 40px;
+  padding: 50px 5% 40px;
   text-align: center;
   background: #000000; /* Pure black background */
   color: var(--white);

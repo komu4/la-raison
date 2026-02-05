@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Gallery | La Raison</title>
+    <link rel="Icon" href="images/LA RAISON LOGIMARK GOLD.png">
+    <link rel="stylesheet" href="furniture.css">
+    <link rel="stylesheet" href="gallery.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300&family=Outfit:wght@200;400;600&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2c173cbe17.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="hero-overlay"></div>
+        <nav>
+            <section>
+                <div class="sidebar-overlay" id="sidebarOverlay"></div>
+                <ul class="side-bar" id="sideBar">
+                    <li onclick="hideSideBar()"><a href="#"><i class="fa-solid fa-xmark"></i></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="furniture.html">Furniture</a></li>
+                    <li><a href="gallery.html">gallery</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+                <ul>
+                    <li class="logo"><a href="#"><img src="images/FURNITURE GOLD.png" alt="Logo"></a></li>
+                    <li class="hideOnMobile"><a href="index.html">Home</a></li>
+                    <li class="hideOnMobile"><a href="about.html">About</a></li>
+                    <li class="hideOnMobile"><a href="furniture.html">Furniture</a></li>
+                    <li class="hideOnMobile nav-active"><a href="gallery.html">gallery</a></li>
+                    <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+                    <li class="menu-btn" onclick="showsidebar()"><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+                </ul>
+            </section>
+        </nav>
+
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1200">
+            <h1>Our Full Collection</h1>
+            <p>Every piece is a blend of bespoke luxury and modern innovation.</p>
+        </div>
+    </header>
+
+    <main class="gallery-container">
+        <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="chair">Chairs</button>
+            <button class="filter-btn" data-filter="lighting">Lighting</button>
+            <button class="filter-btn" data-filter="storage">Storage</button>
+            <button class="filter-btn" data-filter="kitchen">Kitchen</button>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card" data-category="lighting">
+                <div class="product-image-container">
+                    <img src="images/SaveClip.App_625051165_18034927586753425_2255944884882714345_n.jpg"
+                        alt="Ceiling Light">
+                    <div class="product-info">
+                        <a href="#" class="product-link">
+                            <h3>Ceiling Light</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="chair">
+                <div class="product-image-container">
+                    <img src="images/SaveClip.App_590575682_18029281367753425_8871272443530932508_n.jpg"
+                        alt="Wood Chair">
+                    <div class="product-info">
+                        <a href="#" class="product-link">
+                            <h3>Wood Chair</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="storage">
+                <div class="product-image-container">
+                    <img src="images/SaveClip.App_611656790_18032358659753425_6235661990614392821_n.jpg"
+                        alt="Pepper Cupboard">
+                    <div class="product-info">
+                        <a href="#" class="product-link">
+                            <h3>Pepper Cupboard</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="storage">
+                <div class="product-image-container">
+                    <img src="images/SaveClip.App_610691468_18032358650753425_92978694623967760_n.jpg"
+                        alt="Pepper Cupboard">
+                    <div class="product-info">
+                        <a href="#" class="product-link">
+                            <h3>Pepper Cupboard</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="kitchen">
+                <div class="product-image-container">
+                    <img src="images/SaveClip.App_625051165_18034927586753425_2255944884882714345_n.jpg"
+                        alt="Pepper Cupboard">
+                    <div class="product-info">
+                        <a href="#" class="product-link">
+                            <h3>Pepper Cupboard</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="footer-logo-section">
+                <div class="footer-brand-container">
+                    <img src="images/FURNITURE GOLD.png" alt="La Raison Logo" class="footer-logo-img">
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-columns">
+                <div class="footer-col">
+                    <h4>Our Products</h4>
+                    <ul>
+                        <li><a href="#">The Support Suite</a></li>
+                        <li><a href="#">The Sales Suite</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Top Features</h4>
+                    <ul>
+                        <li><a href="#">Ticketing System</a></li>
+                        <li><a href="#">Knowledge Base</a></li>
+                        <li><a href="#">Community Forums</a></li>
+                        <li><a href="#">Help Desk Software</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Product Support</a></li>
+                        <li><a href="#">Request Demo</a></li>
+                        <li><a href="#">Library</a></li>
+                        <li><a href="#">Peoplepower Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Investors</a></li>
+                        <li><a href="#">Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Favourite Things</h4>
+                    <ul>
+                        <li><a href="#">For Enterprise</a></li>
+                        <li><a href="#">For Startups</a></li>
+                        <li><a href="#">For Benchmark</a></li>
+                        <li><a href="#">For Small Business</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© La Raison 2026 - All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.product-card');
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+                cards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

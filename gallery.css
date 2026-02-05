@@ -1,0 +1,39 @@
+.header {
+  height: 30vh;
+}
+.gallery-container {
+  padding: 80px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+/* Filter Styling */
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 10px 25px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  border-color: #d4a337;
+  color: #d4a337;
+}
+
+.filter-btn.active {
+  background: #d4a337;
+  color: white;
+  border-color: #d4a337;
+}

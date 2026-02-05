@@ -163,7 +163,10 @@ nav a:hover,
   color: var(--gold);
   padding-left: 10px;
 }
-
+.side-bar a.nav-active {
+  color: #c5a059;
+  font-weight: 600;
+}
 .sidebar-overlay {
   position: fixed;
   top: 0;

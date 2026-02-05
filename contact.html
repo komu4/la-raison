@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Booking | La Raison</title>
+    <link rel="Icon" href="images/LA RAISON LOGIMARK GOLD.png">
+    <link rel="stylesheet" href="furniture.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300&family=Outfit:wght@200;400;600&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2c173cbe17.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="hero-overlay"></div>
+        <nav>
+            <section>
+                <div class="sidebar-overlay" id="sidebarOverlay"></div>
+                <ul class="side-bar" id="sideBar">
+                    <li onclick="hideSideBar()"><a href="#"><i class="fa-solid fa-xmark"></i></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="furniture.html">Furniture</a></li>
+                    <li><a href="about.html">Greentec</a></li>
+                    <li><a href="contact.html" class="nav-active">Contact</a></li>
+                </ul>
+
+                <ul>
+                    <li class="logo"><a href="#"><img src="images/LA RAISON WORDMARK GOLD.png" alt="Logo"></a></li>
+                    <li class="hideOnMobile"><a href="index.html">Home</a></li>
+                    <li class="hideOnMobile"><a href="about.html">About</a></li>
+                    <li class="hideOnMobile"><a href="furniture.html">Furniture</a></li>
+                    <li class="hideOnMobile "><a href="furniture.html">Greentec</a></li>
+                    <li class="hideOnMobile  nav-active"><a href="contact.html">Contact</a></li>
+                    <li class="menu-btn" onclick="showsidebar()"><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+                </ul>
+            </section>
+        </nav>
+
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1200" style="padding-top: 80px;">
+            <h1>Start Your Transformation</h1>
+            <p>Book a consultation for bespoke furniture or aesthetic solar solutions.</p>
+        </div>
+    </header>
+    <main class="contact-page">
+        <section class="booking-section furniture-theme">
+            <div class="contact-container">
+                <div class="contact-grid">
+                    <div class="contact-info-panel" data-aos="fade-right">
+                        <div class="contact-label">
+                            <img src="images/FURNITURE GOLD.png" alt="Furniture Logo">
+                        </div>
+                        <div class="info-item">
+                            <span><i class="fa-solid fa-location-dot"></i></span>
+                            <div>
+                                <h4>Furniture Studio</h4>
+                                <p>123 Aesthetic Boulevard, Design District</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span><i class="fa-solid fa-envelope"></i></span>
+                            <div>
+                                <h4>Design Enquiries</h4>
+                                <p>concierge@laraison.com</p>
+                            </div>
+                        </div>
+                        <div class="social-box">
+                            <p>Follow our journey</p>
+                            <div class="social-icons">
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-image-box furniture-img" data-aos="fade-left"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="booking-section greentec-theme">
+            <div class="contact-container">
+                <div class="contact-grid">
+                    <div class="contact-info-panel" data-aos="fade-right">
+                        <div class="contact-label">
+                            <img src="images/GREENTEC BLUE GREEN.png" alt="Green Tec Logo">
+                        </div>
+                        <div class="info-item">
+                            <span><i class="fa-solid fa-bolt"></i></span>
+                            <div>
+                                <h4>Energy Hub</h4>
+                                <p>456 Innovation Drive, Tech Park</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span><i class="fa-solid fa-envelope"></i></span>
+                            <div>
+                                <h4>Technical Support</h4>
+                                <p>greentec@laraison.com</p>
+                            </div>
+                        </div>
+                        <div class="social-box">
+                            <p>Sustainable Future</p>
+                            <div class="social-icons">
+                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-image-box greentec-img" data-aos="fade-left"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="about-footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="images/LA RAISON WORDMARK GOLD.png" alt="La Raison">
+            </div>
+
+            <div class="footer-socials">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 LA RAISON. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
+</body>
+
+</html>

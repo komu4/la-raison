@@ -222,6 +222,7 @@ nav li.nav-active a {
 }
 
 .side-bar li:first-child {
+  margin: 0;
   margin-bottom: 40px;
   align-self: flex-end;
 }
@@ -243,6 +244,11 @@ nav li.nav-active a {
   opacity: 1;
   color: var(--gold);
   padding-left: 10px;
+}
+
+.side-bar a.nav-active {
+  color: #c5a059;
+  font-weight: 600;
 }
 
 /* ---------- SIDEBAR OVERLAY ---------- */
@@ -348,11 +354,14 @@ nav li.nav-active a {
 }
 
 .section-header h2 {
-  font-family: var(--font-heading); /* Standardized to Garamond */
-  font-size: clamp(1rem, 3vw, 2rem);
-  margin-bottom: 80px;
-  font-weight: 400;
-  letter-spacing: 3px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+  line-height: 1.3;
+  letter-spacing: -0.1rem;
+  margin-bottom: 24px;
+  color: #333;
+  text-wrap: balance;
 }
 
 .us-card {
@@ -409,10 +418,14 @@ nav li.nav-active a {
 }
 
 .our-services h2 {
-  font-family: var(--font-heading); /* Standardized to Garamond */
-  margin-bottom: 80px;
-  font-weight: 400;
-  letter-spacing: 6px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+  line-height: 1.3;
+  letter-spacing: -0.1rem;
+  margin-bottom: 24px;
+  color: #333;
+  text-wrap: balance;
 }
 
 /* --- THE CONTAINER --- */
