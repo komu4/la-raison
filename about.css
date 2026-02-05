@@ -1,0 +1,499 @@
+/* ---------- ROOT VARIABLES ---------- */
+:root {
+  --gold: #e0cd93;
+  --dark: #111;
+  --cream: #f8f3e6;
+  --white: #ffffff;
+  --max-width: 1200px;
+  --radius-lg: 22px;
+  --radius-md: 14px;
+  --shadow-sm: 0 10px 25px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 30px 70px rgba(0, 0, 0, 0.14);
+  --transition: all 0.35s ease;
+  --font-heading: "Cormorant Garamond", serif;
+  --font-body: "Outfit", sans-serif;
+  --font-accent: "Comfortaa", cursive;
+}
+
+/* ---------- GLOBAL RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  background: var(--white);
+  color: var(--dark);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+/* ---------- NAVIGATION (FIXED AT TOP) ---------- */
+.about-nav {
+  position: absolute; /* Anchors it to the very top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 5%;
+  z-index: 1000;
+  background: transparent;
+}
+
+.nav-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left img {
+  height: 35px;
+}
+
+.nav-right {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-right a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  opacity: 0.8;
+  transition: var(--transition);
+}
+
+.nav-right li.nav-active a {
+  color: var(--gold);
+  opacity: 1;
+  font-weight: 600;
+}
+
+.nav-right a:hover {
+  color: var(--gold);
+  opacity: 1;
+}
+
+.side-bar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 320px;
+  height: 100vh;
+  padding: 40px;
+  background: rgba(18, 18, 18, 0.822);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  transition: var(--transition);
+  z-index: 1000;
+}
+
+.side-bar li:first-child {
+  margin-bottom: 40px;
+  align-self: flex-end;
+}
+
+.side-bar.active {
+  right: 0;
+}
+
+.side-bar a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.side-bar a:hover {
+  opacity: 1;
+  color: var(--gold);
+  padding-left: 10px;
+}
+
+/* ---------- SIDEBAR OVERLAY ---------- */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 998;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.sidebar-overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+.menu-btn {
+  display: none;
+}
+
+/* Responsive Navbar */
+@media (max-width: 850px) {
+  .hideOnMobile {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .fixed-la {
+    display: none;
+  }
+}
+
+/* ---------- HERO SECTION (FIXED SPACING) ---------- */
+.about-hero {
+  height: 70vh;
+  position: relative;
+  background: url("images/SaveClip.App_610691468_18032358650753425_92978694623967760_n.jpg")
+    center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); /* Slightly darker for text readability */
+}
+
+.about-hero .hero-content {
+  position: relative;
+  z-index: 10;
+  padding-top: 80px; /* Safety buffer so text doesn't touch the nav */
+  max-width: 900px;
+}
+
+.about-hero h1 {
+  /* UPDATED TO HEADING FONT */
+  font-family: var(--font-accent);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  letter-spacing: 8px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.about-hero p {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-top: 15px;
+  opacity: 0.9;
+}
+
+/* ---------- SHARED STYLES ---------- */
+.decorative-heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.decorative-heading span {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 0.8rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.btn-minimal {
+  background: transparent;
+  border: 1px solid var(--dark);
+  padding: 12px 30px;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 20px;
+}
+
+.btn-minimal:hover {
+  background: var(--dark);
+  color: white;
+}
+
+/* ---------- PHILOSOPHY SECTION ---------- */
+.philosophy {
+  padding: 120px 5%;
+}
+
+.phil-grid {
+  max-width: var(--max-width);
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.phil-text h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  line-height: 1.2;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+.phil-text p {
+  margin-bottom: 25px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1.05rem;
+}
+
+.phil-img img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ---------- TEAM SECTION ---------- */
+.team {
+  background: var(--cream);
+  padding: 120px 5%;
+}
+
+.team-flex {
+  max-width: var(--max-width);
+  margin: auto;
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+
+.member-cards {
+  display: flex;
+  gap: 25px;
+  flex: 1.2;
+}
+
+.member-cards .card {
+  background: white;
+  padding: 25px;
+  border-radius: var(--radius-md);
+  text-align: center;
+  flex: 1;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.member-cards .card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+}
+
+.member-cards .card img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.member-cards h3 {
+  font-family: var(--font-heading);
+  letter-spacing: 2px;
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.member-cards span {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.team-quote {
+  flex: 0.8;
+}
+
+.team-quote blockquote {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-style: italic;
+  line-height: 1.3;
+  margin-bottom: 35px;
+  color: var(--dark);
+}
+
+/* ---------- JOURNEY SECTION (CLEAN VERSION) ---------- */
+.journey {
+  padding: 120px 5%;
+  background: var(--white);
+}
+
+.journey-container {
+  max-width: 600px; /* Constrained width for a centered, elegant look */
+  margin: 0 auto;
+}
+
+.timeline {
+  border-left: 2px solid rgba(224, 205, 147, 0.4); /* Gold line */
+  padding-left: 50px;
+  position: relative;
+}
+
+.milestone {
+  margin-bottom: 70px; /* More space between years for luxury feel */
+  position: relative;
+}
+
+.milestone:last-child {
+  margin-bottom: 0;
+}
+
+/* The Gold Dot */
+.milestone::before {
+  content: "";
+  position: absolute;
+  left: -56px; /* Perfectly centered on the 2px border */
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  background: var(--gold);
+  border-radius: 50%;
+  box-shadow: 0 0 0 6px white; /* Cleans the line behind the dot */
+}
+
+.m-year {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.milestone p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 1.6;
+}
+
+/* Responsive adjustment */
+@media (max-width: 600px) {
+  .journey-container {
+    padding-left: 20px;
+  }
+  .m-year {
+    font-size: 1.6rem;
+  }
+}
+
+/* ---------- FINAL CALL TO ACTION ---------- */
+.final-call {
+  background: var(--white); /* Section background is now white */
+  padding: 120px 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.cta-content {
+  background: linear-gradient(135deg, #e0cd93 0%, #c5a059 100%);
+  padding: 80px 40px;
+  border-radius: var(--radius-lg);
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.cta-content p {
+  font-family: var(--font-accent);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  margin-bottom: 40px;
+  font-weight: 400;
+  color: var(--dark); /* Dark text on gold looks premium */
+  line-height: 1.2;
+}
+
+.cta-content .btn-gold {
+  background: var(--dark); /* Button on gold card should be dark */
+  color: var(--white);
+  border: none;
+  padding: 18px 45px;
+  font-family: var(--font-body);
+  letter-spacing: 3px;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: var(--transition);
+}
+
+.cta-content .btn-gold:hover {
+  background: #333;
+  transform: translateY(-3px);
+}
+
+/* ---------- BLACK FOOTER ---------- */
+.about-footer {
+  padding: 100px 5% 40px;
+  text-align: center;
+  background: #000000; /* Pure black background */
+  color: var(--white);
+}
+
+.footer-logo img {
+  height: 45px;
+  margin-bottom: 40px;
+  filter: brightness(0) invert(1); /* Makes the logo white if it was dark */
+}
+
+.footer-socials {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.footer-socials a {
+  color: var(--gold); /* Gold icons on black background */
+  font-size: 1.3rem;
+  transition: var(--transition);
+}
+
+.footer-socials a:hover {
+  color: var(--white);
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle divider */
+  padding-top: 35px;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  opacity: 0.6;
+  text-transform: uppercase;
+  color: var(--white);
+}

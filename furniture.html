@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | La Raison</title>
+
+    <link rel="Icon" href="images/LA RAISON LOGIMARK GOLD.png">
+    <link rel="stylesheet" href="furniture.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300&family=Outfit:wght@200;400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS CSS for minimal animations -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/2c173cbe17.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <header>
+        <div class="hero-overlay"></div>
+        <nav>
+            <section>
+                <div class="sidebar-overlay" id="sidebarOverlay"></div>
+                <ul class="side-bar" id="sideBar">
+                    <li onclick="hideSideBar()"><a href="#"><i class="fa-solid fa-xmark"></i></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="furniture.html">Furniture</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+                <ul>
+                    <li class="logo"><a href="#"><img src="images/FURNITURE GOLD.png" alt="Logo"></a></li>
+                    <li class="hideOnMobile"><a href="index.html">Home</a></li>
+                    <li class="hideOnMobile"><a href="about.html">About</a></li>
+                    <li class="hideOnMobile nav-active"><a href="furniture.html">Furniture</a></li>
+                    <li class="hideOnMobile"><a href="#">Contact</a></li>
+                    <li class="menu-btn" onclick="showsidebar()"><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+                </ul>
+            </section>
+        </nav>
+
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1200">
+            <h1>Creative Home Simplify Your Furniture</h1>
+            <p>Elevating your living space with bespoke designs and sustainable solar innovation.</p>
+            <button class="btn-white">Shop Now</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="create">
+            <div class="create-grid">
+                <div class="img-container" data-aos="fade-right" data-aos-duration="1000">
+                    <img src="images/SaveClip.App_616418300_18033444413753425_518220412795370762_n.jpg"
+                        alt="Aesthetic Sofa">
+                </div>
+                <div class="create-text" data-aos="fade-left" data-aos-duration="1000">
+                    <h2>We Create Your Home More Aesthetic</h2>
+                    <p>Bespoke furniture crafted to elevate any interior, merging classic elegance with modern
+                        functionality.</p>
+                    <div class="feature-list">
+                        <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <div>
+                                <h4>Valuation Services</h4>
+                                <p>Professional assessment of your space for optimal design flow.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <div>
+                                <h4>Development of Furniture Models</h4>
+                                <p>Custom prototyping for unique, one-of-a-kind luxury pieces.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="new-in-store" data-aos="fade-up" data-aos-duration="1000">
+            <div class="store-header">
+                <div class="header-text">
+                    <h2>New In Store Now</h2>
+                    <p>Get the best and most stylish furniture today.</p>
+                </div>
+            </div>
+
+            <div class="store-slider-wrapper">
+                <div class="swiper-button-prev custom-arrow"><i class="fa-solid fa-chevron-left"></i></div>
+                <div class="swiper-button-next custom-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+
+                <div class="swiper store-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="category-card">
+                                <img src="images/SaveClip.App_590575682_18029281367753425_8871272443530932508_n.jpg"
+                                    alt="Chair">
+                                <h3>Chair</h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="category-card">
+                                <img src="images/SaveClip.App_610691468_18032358650753425_92978694623967760_n.jpg"
+                                    alt="Bed">
+                                <h3>Bed</h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="category-card">
+                                <img src="images/SaveClip.App_616418300_18033444413753425_518220412795370762_n.jpg"
+                                    alt="Cupboard">
+                                <h3>Cupboard</h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="category-card">
+                                <img src="images/SaveClip.App_590575682_18029281367753425_8871272443530932508_n.jpg"
+                                    alt="Lighting">
+                                <h3>Lighting</h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="category-card">
+                                <img src="images/SaveClip.App_590575682_18029281367753425_8871272443530932508_n.jpg"
+                                    alt="Fireplace">
+                                <h3>Fireplace</h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="category-card">
+                                <img src="images/SaveClip.App_590575682_18029281367753425_8871272443530932508_n.jpg"
+                                    alt="Cabinets">
+                                <h3>Cabinets</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="all-products">
+            <div class="section-header" data-aos="fade-up" data-aos-duration="1000">
+                <div class="header-content">
+                    <h2>All Product</h2>
+                    <p>The best furniture to simplify your home and make it more aesthetic.</p>
+                </div>
+                <a href="#" class="view-all-btn">View All Product</a>
+            </div>
+
+            <div class="product-grid">
+                <!-- Repeat for all product cards -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="images/SaveClip.App_625051165_18034927586753425_2255944884882714345_n.jpg"
+                            alt="Ceiling Light">
+                    </div>
+                    <div class="product-info">
+                        <h3>Ceiling Light</h3>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="images/SaveClip.App_590575682_18029281367753425_8871272443530932508_n.jpg"
+                            alt="Wood Chair">
+                    </div>
+                    <div class="product-info">
+                        <h3>Wood Chair</h3>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="images/SaveClip.App_611656790_18032358659753425_6235661990614392821_n.jpg"
+                            alt="Pepper Cupboard">
+                    </div>
+                    <div class="product-info">
+                        <h3>Pepper Cupboard</h3>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="images/SaveClip.App_625051165_18034927586753425_2255944884882714345_n.jpg"
+                            alt="Ole Gardsner Spring">
+                    </div>
+                    <div class="product-info">
+                        <h3>Ole Gardsner Spring</h3>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="images/SaveClip.App_625051165_18034927586753425_2255944884882714345_n.jpg"
+                            alt="Treos Series 011">
+                    </div>
+                    <div class="product-info">
+                        <h3>Treos Series 011</h3>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="images/SaveClip.App_616418300_18033444413753425_518220412795370762_n.jpg"
+                            alt="Multi Gilderman Slider">
+                    </div>
+                    <div class="product-info">
+                        <h3>Multi Gilderman Slider</h3>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="images/SaveClip.App_611656790_18032358659753425_6235661990614392821_n.jpg"
+                            alt="XORA Corner Desk">
+                    </div>
+                    <div class="product-info">
+                        <h3>XORA Corner Desk</h3>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="images/SaveClip.App_625051165_18034927586753425_2255944884882714345_n.jpg"
+                            alt="Black Forest Series Wood">
+                    </div>
+                    <div class="product-info">
+                        <h3>Black Forest Series Wood</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="solar-promo">
+            <div class="solar-content">
+                <h2>Our Solar Services</h2>
+                <p>Transform your roof into an asset with our aesthetic, high-efficiency solar installations.</p>
+                <button class="btn-gold">Read More</button>
+            </div>
+            <div class="solar-visual">
+                <img src="images/solar-panel_2196335.png" alt="Solar Installation">
+            </div>
+        </section>
+
+        <section class="how-it-works">
+            <div class="section-header" data-aos="fade-up" data-aos-duration="1000">
+                <h2>How It Works</h2>
+            </div>
+            <div class="step-grid">
+                <div class="step-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-img"><img
+                            src="images/SaveClip.App_611656790_18032358659753425_6235661990614392821_n.jpg"
+                            alt="Consultation"></div>
+                    <span class="step-num">1</span>
+                    <p>Consult with our designers about your vision.</p>
+                </div>
+                <div class="step-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-img"><img
+                            src="images/SaveClip.App_616418300_18033444413753425_518220412795370762_n.jpg"
+                            alt="Production"></div>
+                    <span class="step-num">2</span>
+                    <p>We source sustainable materials for production.</p>
+                </div>
+                <div class="step-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="step-img"><img
+                            src="images/SaveClip.App_590575682_18029281367753425_8871272443530932508_n.jpg"
+                            alt="Installation"></div>
+                    <span class="step-num">3</span>
+                    <p>Expert delivery and installation in your space.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="footer-logo-section">
+                <div class="footer-brand-container">
+                    <img src="images/LA RAISON GOLD 2.png" alt="La Raison Logo" class="footer-logo-img">
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-columns">
+                <div class="footer-col">
+                    <h4>Our Products</h4>
+                    <ul>
+                        <li><a href="#">The Support Suite</a></li>
+                        <li><a href="#">The Sales Suite</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Top Features</h4>
+                    <ul>
+                        <li><a href="#">Ticketing System</a></li>
+                        <li><a href="#">Knowledge Base</a></li>
+                        <li><a href="#">Community Forums</a></li>
+                        <li><a href="#">Help Desk Software</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Product Support</a></li>
+                        <li><a href="#">Request Demo</a></li>
+                        <li><a href="#">Library</a></li>
+                        <li><a href="#">Peoplepower Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Investors</a></li>
+                        <li><a href="#">Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Favourite Things</h4>
+                    <ul>
+                        <li><a href="#">For Enterprise</a></li>
+                        <li><a href="#">For Startups</a></li>
+                        <li><a href="#">For Benchmark</a></li>
+                        <li><a href="#">For Small Business</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© La Raison 2026 - All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            offset: 100,
+            duration: 800,
+            easing: 'ease-out-cubic'
+        });
+    </script>
+</body>
+
+</html>

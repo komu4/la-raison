@@ -1,0 +1,643 @@
+/* ---------- ROOT VARIABLES ---------- */
+:root {
+  --gold: #e0cd93;
+  --dark: #111;
+  --cream: #f8f3e6;
+  --white: #ffffff;
+  --max-width: 1200px;
+  --radius-lg: 22px;
+  --radius-md: 14px;
+  --shadow-sm: 0 10px 25px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 30px 70px rgba(0, 0, 0, 0.14);
+  --transition: all 0.35s ease;
+  --font-heading: "Cormorant Garamond", serif;
+  --font-body: "Outfit", sans-serif;
+  --font-accent: "Comfortaa", cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ---------- GLOBAL RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  background: var(--white);
+  color: var(--dark);
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+/* ---------- TYPOGRAPHY ---------- */
+h1,
+h2,
+.card-subheading {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+nav a,
+button,
+.us-card h3,
+.side-bar a {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+p,
+.card-text {
+  font-family: var(--font-body);
+  font-weight: 200;
+  line-height: 1.8;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.hero-content h1 {
+  font-family: var(--font-accent); /* Changed to Comfortaa */
+  font-weight: 300;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.1;
+  letter-spacing: -1px;
+  color: #ffffff;
+  text-align: center;
+}
+
+footer {
+  font-family: var(--font-body);
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Luxury Footer Link Style */
+footer a {
+  font-family: var(--font-body);
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+/* ---------- SECTION SPACING ---------- */
+section {
+  padding: 6rem 5%;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-header h2 {
+  font-family: var(--font-heading); /* Ensuring Garamond for Headers */
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+/* ---------- HEADER / HERO ---------- */
+header {
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  max-height: 740px;
+  overflow: hidden;
+  color: white;
+}
+
+/* Background Slider */
+.slider-container {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  animation: heroImageFlyIn 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  transform-origin: center center;
+}
+
+.slider-wrapper {
+  display: flex;
+  height: 100%;
+  transition: transform 1.2s ease-in-out;
+}
+
+.slider-wrapper img {
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(1px);
+  z-index: 1;
+}
+
+/* ---------- NAVBAR ---------- */
+nav {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 22px 5%;
+  z-index: 20;
+}
+
+nav section {
+  padding: 0;
+}
+
+nav ul {
+  max-width: var(--max-width);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+}
+
+nav li:first-child {
+  margin-right: auto;
+}
+
+nav img {
+  height: 38px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.85;
+  transition: var(--transition);
+}
+
+nav a:hover {
+  color: #c5a059;
+  letter-spacing: 3.5px;
+}
+
+nav li.nav-active a {
+  color: #c5a059;
+  font-weight: 600;
+}
+
+/* ---------- MOBILE MENU BUTTON ---------- */
+.menu-btn {
+  display: none;
+  font-size: 1.5rem;
+}
+
+/* ---------- SIDEBAR ---------- */
+.side-bar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 320px;
+  height: 100vh;
+  padding: 40px;
+  background: rgba(18, 18, 18, 0.822);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  transition: var(--transition);
+  z-index: 1000;
+}
+
+.side-bar li:first-child {
+  margin-bottom: 40px;
+  align-self: flex-end;
+}
+
+.side-bar.active {
+  right: 0;
+}
+
+.side-bar a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.side-bar a:hover {
+  opacity: 1;
+  color: var(--gold);
+  padding-left: 10px;
+}
+
+/* ---------- SIDEBAR OVERLAY ---------- */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 998;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.sidebar-overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Responsive Navbar */
+@media (max-width: 850px) {
+  .hideOnMobile {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .fixed-la {
+    display: none;
+  }
+}
+
+/* ---------- HERO CONTENT ---------- */
+.hero-section {
+  position: relative;
+  z-index: 5;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content h1 {
+  font-family: var(--font-accent); /* Standardized to Comfortaa */
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: textFadeUp 1.2s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.hero-content button {
+  font-family: var(--font-body); /* Standardized to Outfit */
+  margin-top: 40px;
+  padding: 16px 55px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: transparent;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.8rem;
+  transition: var(--transition);
+  opacity: 0;
+  animation: textFadeUp 1.2s ease-out forwards;
+  animation-delay: 0.8s;
+}
+
+.hero-content button:hover {
+  cursor: pointer;
+  background: var(--gold);
+  color: var(--dark);
+  border-color: white;
+}
+
+/* ---------- WHY US ---------- */
+.why-us {
+  background: var(--cream);
+  padding: 120px 5%;
+}
+
+.us-grid {
+  max-width: var(--max-width);
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 3rem;
+}
+
+.section-header h2 {
+  font-family: var(--font-heading); /* Standardized to Garamond */
+  font-size: clamp(1rem, 3vw, 2rem);
+  margin-bottom: 80px;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
+.us-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.us-card:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.us-icon {
+  width: auto;
+  height: 50px;
+  border-radius: 5px;
+  background: transparent;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto 30px auto;
+}
+
+.us-card h3 {
+  font-family: var(--font-body); /* Standardized to Outfit */
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  color: var(--dark);
+}
+
+.us-card p {
+  font-family: var(--font-body); /* Standardized to Outfit */
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: rgba(0, 0, 0, 0.5);
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+/* --- OUR SERVICES SECTION --- */
+.our-services {
+  padding: 120px 5%;
+  text-align: center;
+  background-color: var(--white);
+}
+
+.our-services h2 {
+  font-family: var(--font-heading); /* Standardized to Garamond */
+  margin-bottom: 80px;
+  font-weight: 400;
+  letter-spacing: 6px;
+}
+
+/* --- THE CONTAINER --- */
+.service-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+}
+
+/* --- THE CENTERED WATERMARK --- */
+.fixed-la {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 800px;
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.fixed-la img {
+  width: 100%;
+  filter: grayscale(1);
+}
+
+/* --- SERVICE FLEX --- */
+.service-flex {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+/* --- REFINED LUXURY CARDS --- */
+.luxury-card {
+  width: min(450px, 100%);
+  background: rgba(142, 142, 142, 0);
+  backdrop-filter: blur(1px);
+  border-radius: 5px;
+  padding: 60px 40px;
+  transition: var(--transition);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-1 {
+  border: 1px solid rgba(255, 217, 0, 0.838);
+  border-top: 3px solid var(--gold);
+}
+
+.card-2 {
+  border: 1px solid rgba(0, 0, 255, 0.566);
+  border-top: 3px solid blue;
+}
+
+.luxury-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+}
+
+/* --- TYPOGRAPHY INSIDE CARDS --- */
+.card-logo img {
+  height: 40px;
+  margin-bottom: 35px;
+}
+
+.card-image {
+  margin-bottom: 30px;
+  opacity: 0.8;
+}
+
+.card-subheading {
+  font-family: var(--font-accent); /* Changed to Comfortaa */
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.card-text {
+  font-family: var(--font-body); /* Standardized to Outfit */
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* ---------- FOOTER ---------- */
+.main-footer {
+  background: #4b3611;
+  color: white;
+  padding: 90px 8% 35px;
+}
+
+.footer-top {
+  max-width: var(--max-width);
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding-bottom: 50px;
+}
+
+.footer-brand-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-logo-img {
+  height: 45px;
+}
+
+.footer-brand {
+  font-family: var(--font-accent); /* Added Comfortaa to Brand Name */
+  font-size: 1.7rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 18px;
+  margin-top: 25px;
+}
+
+.social-links a {
+  color: white;
+  opacity: 0.6;
+  transition: var(--transition);
+}
+
+.social-links a:hover {
+  opacity: 1;
+  transform: translateY(-4px);
+  color: var(--gold);
+}
+
+.footer-columns {
+  flex: 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 30px;
+}
+
+.footer-col h4 {
+  font-family: var(--font-body); /* Standardized to Outfit */
+  font-size: 0.8rem;
+  margin-bottom: 18px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.footer-col a {
+  font-family: var(--font-body); /* Standardized to Outfit */
+  text-decoration: none;
+  color: white;
+  opacity: 0.55;
+  font-size: 0.6rem;
+}
+
+.footer-col a:hover {
+  opacity: 1;
+  color: var(--gold);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  opacity: 0.5;
+  font-size: 0.8rem;
+}
+
+.footer-bottom p {
+  font-family: var(--font-body); /* Standardized to Outfit */
+  color: var(--cream);
+}
+
+/* Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.us-card:nth-child(2),
+.luxury-card:nth-child(2) {
+  transition-delay: 0.15s;
+}
+.us-card:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+@keyframes heroImageFlyIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.1) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes textFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
