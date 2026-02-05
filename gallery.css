@@ -1,6 +1,10 @@
 .header {
   height: 30vh;
 }
+.hero-content {
+  margin-top: 30px;
+  padding-top: 20px;
+}
 .gallery-container {
   padding: 80px 5%;
   max-width: 1200px;

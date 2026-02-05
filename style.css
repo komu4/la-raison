@@ -316,20 +316,18 @@ nav li.nav-active a {
 }
 
 .hero-content button {
-  font-family: var(--font-body); /* Standardized to Outfit */
-  margin-top: 40px;
-  padding: 16px 55px;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  background: transparent;
-  color: white;
+  background: rgba(255, 255, 255, 0.39);
+  backdrop-filter: blur(4px);
+  color: var(--white);
+  border: none;
+  padding: 16px 40px;
+  font-family: var(--font-body);
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   font-size: 0.8rem;
+  cursor: pointer;
   transition: var(--transition);
-  opacity: 0;
-  animation: textFadeUp 1.2s ease-out forwards;
-  animation-delay: 0.8s;
+  border-radius: 4px;
 }
 
 .hero-content button:hover {
