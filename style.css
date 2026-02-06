@@ -363,10 +363,9 @@ nav li.nav-active a {
 }
 
 .us-card {
-  background: white;
-  padding: 2rem;
-  border-radius: 5px;
-  box-shadow: var(--shadow-sm);
+  background: #fafafa;
+  border-radius: var(--radius-md);
+  padding: 45px 35px;
   text-align: center;
   transition: var(--transition);
 }
@@ -425,58 +424,43 @@ nav li.nav-active a {
   color: #333;
   text-wrap: balance;
 }
-
-/* --- THE CONTAINER --- */
 .service-container {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 500px;
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* --- THE CENTERED WATERMARK --- */
 .fixed-la {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-  max-width: 800px;
-  opacity: 0.1;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.04;
   pointer-events: none;
-  z-index: 1;
 }
 
 .fixed-la img {
-  width: 100%;
-  filter: grayscale(1);
+  width: 420px;
 }
 
 /* --- SERVICE FLEX --- */
 .service-flex {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: wrap;
-  gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 60px;
   position: relative;
   z-index: 2;
-  width: 100%;
 }
 
 /* --- REFINED LUXURY CARDS --- */
 .luxury-card {
-  width: min(450px, 100%);
-  background: rgba(142, 142, 142, 0);
-  backdrop-filter: blur(1px);
-  border-radius: 5px;
-  padding: 60px 40px;
+  background: rgba(255, 255, 255, 0.007);
+  padding: 60px 45px;
+  border-radius: var(--radius-lg);
+  text-align: center;
   transition: var(--transition);
   cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .card-1 {
