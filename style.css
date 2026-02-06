@@ -347,7 +347,8 @@ nav li.nav-active a {
   max-width: var(--max-width);
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  /* CHANGED: Reduced 260px to 250px for safety */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 3rem;
 }
 
@@ -391,7 +392,7 @@ nav li.nav-active a {
 }
 
 .us-card h3 {
-  font-family: var(--font-body); /* Standardized to Outfit */
+  font-family: var(--font-body);
   font-size: 1.4rem;
   letter-spacing: 2px;
   margin-bottom: 15px;
@@ -399,7 +400,7 @@ nav li.nav-active a {
 }
 
 .us-card p {
-  font-family: var(--font-body); /* Standardized to Outfit */
+  font-family: var(--font-body);
   font-size: 0.9rem;
   line-height: 1.8;
   color: rgba(0, 0, 0, 0.5);
@@ -447,7 +448,7 @@ nav li.nav-active a {
 /* --- SERVICE FLEX --- */
 .service-flex {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 60px;
   position: relative;
   z-index: 2;
@@ -477,6 +478,36 @@ nav li.nav-active a {
   transform: translateY(-10px);
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
   background: #ffffff;
+}
+
+/* ---------- RESPONSIVE FIXES ---------- */
+@media (max-width: 768px) {
+  .luxury-card {
+    padding: 40px 25px;
+  }
+
+  .service-flex {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-flex,
+  .us-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .luxury-card {
+    padding: 30px 20px;
+  }
+
+  .card-logo img {
+    margin-bottom: 20px;
+  }
+
+  .card-image {
+    margin-bottom: 20px;
+  }
 }
 
 /* --- TYPOGRAPHY INSIDE CARDS --- */
@@ -563,7 +594,7 @@ nav li.nav-active a {
 }
 
 .footer-col h4 {
-  font-family: var(--font-body); /* Standardized to Outfit */
+  font-family: var(--font-body);
   font-size: 0.8rem;
   margin-bottom: 18px;
   letter-spacing: 1.5px;
@@ -571,7 +602,7 @@ nav li.nav-active a {
 }
 
 .footer-col a {
-  font-family: var(--font-body); /* Standardized to Outfit */
+  font-family: var(--font-body);
   text-decoration: none;
   color: white;
   opacity: 0.55;
@@ -591,7 +622,7 @@ nav li.nav-active a {
 }
 
 .footer-bottom p {
-  font-family: var(--font-body); /* Standardized to Outfit */
+  font-family: var(--font-body);
   color: var(--cream);
 }
 
