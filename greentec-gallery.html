@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/LA RAISON LOGIMARK GOLD.png">
+    <title>Gallery | Greentec Energy</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&family=Outfit:wght@200;400;600&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2c173cbe17.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="greentec.css">
+    <link rel="stylesheet" href="greentec-gallery.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <section class="nav-container">
+                <div class="sidebar-overlay" id="sidebarOverlay"></div>
+                <ul class="side-bar" id="sideBar">
+                    <li onclick="hideSideBar()"><a href="#"><i class="fa-solid fa-xmark"></i></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="greentec.html">Greentec</a></li>
+                    <li><a href="greentec-gallery.html" class="nav-active">WareHouse</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+                <div class="logo"><a href="greentec.html"><img src="images/GREENTEC WHITE (2).png" alt="Logo"></a></div>
+                <ul class="ul-li">
+                    <li class="hideOnMobile"><a href="index.html">Home</a></li>
+                    <li class="hideOnMobile"><a href="about.html">About</a></li>
+                    <li class="hideOnMobile"><a href="furniture.html">Furniture</a></li>
+                    <li class="hideOnMobile nav-active"><a href="greentec.html">Greentec</a></li>
+                    <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+                    <li class="menu-btn" onclick="showsidebar()"><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+                </ul>
+                <a href="contact.html" class="cta-btn hideOnMobile">Get a Quote</a>
+            </section>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="slider-container">
+                <div class="slider-wrapper" id="sliderWrapper">
+                    <img src="images/Solar Investment_ So können Sie direkt in Solarenergie investieren.jpg"
+                        alt="Luxury Interior 1">
+                    <img src="images/DIY Solar System Complete Guide - DIY Solar Panels.jpg" alt="Luxury Interior 2">
+                </div>
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero">
+                <div class="hero-content">
+                    <h2>Seamless Energy Independence <br>for Homes and Industry.</h2>
+                    <a href="contact.html" class="cta-btn">Get a Quote</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-container">
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">All Solutions</button>
+                <button class="filter-btn" data-filter="solar">Solar Panels</button>
+                <button class="filter-btn" data-filter="wind">Wind Tech</button>
+                <button class="filter-btn" data-filter="storage">Battery Storage</button>
+            </div>
+
+            <div class="product-grid">
+                <div class="product-card" data-category="storage">
+                    <div class="product-image-container">
+                        <img src="images/SaveClip.App_625051165_18034927586753425_2255944884882714345_n.jpg"
+                            alt="Solar Project">
+                        <div class="product-info">
+                            <a href="#" class="product-link">
+                                <h3>Industrial Solar</h3>
+                                <p>Clean Energy</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="solar">
+                    <div class="product-image-container">
+                        <img src="images/SaveClip.App_611656790_18032358659753425_6235661990614392821_n.jpg"
+                            alt="Solar Project">
+                        <div class="product-info">
+                            <a href="#" class="product-link">
+                                <h3>Industrial Solar</h3>
+                                <p>Clean Energy</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="solar">
+                    <div class="product-image-container">
+                        <img src="images/SaveClip.App_616418300_18033444413753425_518220412795370762_n.jpg"
+                            alt="Solar Project">
+                        <div class="product-info">
+                            <a href="#" class="product-link">
+                                <h3>Industrial Solar</h3>
+                                <p>Clean Energy</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.product-card');
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+                cards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                        setTimeout(() => card.style.opacity = '1', 10);
+                    } else {
+                        card.style.opacity = '0';
+                        setTimeout(() => card.style.display = 'none', 300);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

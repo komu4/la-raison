@@ -41,3 +41,9 @@ const productSwiper = new Swiper(".product-slider", {
     },
   },
 });
+
+function viewAll() {
+  document.querySelectorAll(".hideRow").forEach((row) => {
+    row.classList.add("show-row");
+  });
+}

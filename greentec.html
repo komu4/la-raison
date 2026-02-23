@@ -29,7 +29,7 @@
                     <li><a href="index.html" class="nav-active">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="furniture.html">Furniture</a></li>
-                    <li><a href="about.html">Greentec</a></li>
+                    <li><a href="greentec.html">Greentec</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
 
@@ -43,17 +43,31 @@
                     <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
                     <li class="menu-btn" onclick="showsidebar()"><a href="#"><i class="fa-solid fa-bars"></i></a></li>
                 </ul>
-                <a href="#contact" class="cta-btn hideOnMobile">Get a Quote</i></a>
+                <a href="contact.html" class="cta-btn hideOnMobile">Get a Quote</i></a>
             </section>
         </nav>
     </header>
 
     <main>
         <section class="hero-section">
+            <div class="slider-container">
+                <div class="slider-wrapper" id="sliderWrapper">
+                    <img src="images/DIY Solar System Complete Guide - DIY Solar Panels.jpg" alt="Luxury Interior 1">
+                    <img src="images/solarr.jpg" alt="Luxury Interior 2">
+                    <img src="images/Save Money with Solar Panels – Clean Energy for Your Home.jpg"
+                        alt="Luxury Interior 3">
+                    <img src="images/Solar Investment_ So können Sie direkt in Solarenergie investieren.jpg"
+                        alt="Luxury Interior 4">
+                    <img src="images/Diy Solar Power System.jpg" alt="Luxury Interior 4">
+                </div>
+            </div>
+
+            <div class="hero-overlay"></div>
+
             <div class="hero">
                 <div class="hero-content">
                     <h2>Seamless Energy Independence <br>for Homes and Industry.</h2>
-                    <a href="#contact" class="cta-btn">Get a Quote</i></a>
+                    <a href="contact.html" class="cta-btn">Get a Quote</i></a>
                 </div>
             </div>
         </section>
@@ -70,22 +84,6 @@
             <div class="stat-item">
                 <h2>100%</h2>
                 <p>Commitment</p>
-            </div>
-        </section>
-
-        <section class="logic">
-            <div class="logic-content">
-                <h2>The Logic of <br><span>Sustainable Energy</span></h2>
-                <p>Providing intelligent solar and wind solutions for a cleaner, more efficient future. Experience the
-                    power of La Raison.</p>
-                <div class="logic-btns">
-                    <a href="#" class="btn-primary">Explore Solutions</a>
-                    <a href="#" class="btn-secondary">Watch Video</a>
-                </div>
-            </div>
-            <div class="logic-image">
-                <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80"
-                    alt="Solar Panels">
             </div>
         </section>
 
@@ -117,7 +115,7 @@
             <div class="container">
                 <div class="services-header">
                     <h2 class="section-heading">We Offer a Range of Services <br>to Meet Your Needs</h2>
-                    <a href="#" class="btn-all-services">All Services</a>
+                    <a onclick="viewAll()" class="btn-all-services">All Services</a>
                 </div>
 
                 <div class="services-list">
@@ -143,7 +141,7 @@
                         <div class="service-card-image img-residential"></div>
                     </div>
 
-                    <div class="service-row">
+                    <div class="service-row hideRow">
                         <div class="service-card-text">
                             <div class="content">
                                 <h3>Housing</h3>
@@ -154,7 +152,7 @@
                         <div class="service-card-image img-housing"></div>
                     </div>
 
-                    <div class="service-row">
+                    <div class="service-row hideRow">
                         <div class="service-card-text">
                             <div class="content">
                                 <h3>Energy Storage</h3>
@@ -172,7 +170,7 @@
             <div class="container">
                 <div class="products-header">
                     <h2>Our Products</h2>
-                    <a href="products.html" class="btn-view-all-products">View Catalog</a>
+                    <a href="greentec-gallery.html" class="btn-view-all-products">View Catalog</a>
                 </div>
 
                 <div class="product-slider-wrapper">
@@ -314,45 +312,74 @@
                             class="highlight">Questions</span></h4>
                 </div>
 
-                <div class="info-grid">
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fa-solid fa-location-dot"></i>
+                <div class="contact-wrapper">
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="info-text">
+                                <h3>Company Office</h3>
+                                <p>23 island rd lagos, NIGERIA</p>
+                            </div>
                         </div>
-                        <div class="info-text">
-                            <h3>Company Office</h3>
-                            <p>23 island rd lagos, NIGERIA</p>
+
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div class="info-text">
+                                <h3>Phone Number</h3>
+                                <p>Service: +234 8112748215</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="info-text">
+                                <h3>E-mail Address</h3>
+                                <p>contact@yourdomain.com</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+                            <div class="info-text">
+                                <h3>Work Hours</h3>
+                                <p>Mon – Fri: 9am – 5pm</p>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fa-solid fa-phone"></i>
-                        </div>
-                        <div class="info-text">
-                            <h3>Phone Number</h3>
-                            <p>Service: +234 8112748215</p>
-                        </div>
-                    </div>
+                    <div class="form-container">
+                        <h3 class="form-title">Send a Message</h3>
+                        <form class="greentec-form">
+                            <div class="form-row">
+                                <div class="input-group">
+                                    <input type="text" placeholder=" " required>
+                                    <label>Name</label>
+                                </div>
+                                <div class="input-group">
+                                    <input type="email" placeholder=" " required>
+                                    <label>Email</label>
+                                </div>
+                            </div>
 
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fa-solid fa-envelope"></i>
-                        </div>
-                        <div class="info-text">
-                            <h3>E-mail Address</h3>
-                            <p>Write us an inquiry<br>contact@yourdomain.com</p>
-                        </div>
-                    </div>
+                            <div class="input-group">
+                                <select required>
+                                    <option value="" disabled selected></option>
+                                    <option value="quote">Request a Quote</option>
+                                    <option value="support">Technical Support</option>
+                                    <option value="partnership">Partnership</option>
+                                </select>
+                                <label class="select-label">Subject</label>
+                            </div>
 
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fa-solid fa-clock"></i>
-                        </div>
-                        <div class="info-text">
-                            <h3>Work Hours</h3>
-                            <p>Monday – Friday: 9:00 am – 5:00 pm<br>Saturday: 10:00 am – 2:00 pm</p>
-                        </div>
+                            <div class="input-group">
+                                <textarea placeholder=" " rows="3" required></textarea>
+                                <label>How can we help?</label>
+                            </div>
+
+                            <button type="submit" class="send-btn">
+                                Send Message <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>

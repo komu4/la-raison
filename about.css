@@ -192,8 +192,7 @@ nav li.nav-active a {
 .about-hero {
   height: clamp(46vh, 65vh, 80vh);
   position: relative;
-  background: url("images/SaveClip.App_610691468_18032358650753425_92978694623967760_n.jpg")
-    center/cover no-repeat;
+  background: url("images/kitchen1.jpg") center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
