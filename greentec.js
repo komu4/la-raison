@@ -47,3 +47,57 @@ function viewAll() {
     row.classList.add("show-row");
   });
 }
+
+//modal
+function openProductModal(card) {
+  const img = card.dataset.img;
+  const badge = card.dataset.badge;
+  const cat = card.dataset.cat;
+  const title = card.dataset.title;
+  const price = card.dataset.price;
+  const desc = card.dataset.desc;
+  const specs = card.dataset.specs ? JSON.parse(card.dataset.specs) : [];
+
+  document.getElementById("modalImage").style.backgroundImage =
+    "url('" + img + "')";
+
+  const badgeEl = document.getElementById("modalTopBadges");
+  badgeEl.innerHTML = badge
+    ? '<span class="modal-badge">' + badge + "</span>"
+    : "";
+
+  document.getElementById("modalCategory").textContent = cat || "";
+  document.getElementById("modalTitle").textContent = title || "";
+  document.getElementById("modalPrice").textContent = price || "";
+  document.getElementById("modalDesc").textContent = desc || "";
+
+  const specsEl = document.getElementById("modalSpecs");
+  if (specs.length) {
+    specsEl.innerHTML = specs
+      .map(function (s) {
+        return (
+          '<div class="spec-row"><span class="spec-label">' +
+          s[0] +
+          '</span><span class="spec-value">' +
+          s[1] +
+          "</span></div>"
+        );
+      })
+      .join("");
+    specsEl.style.display = "grid";
+  } else {
+    specsEl.style.display = "none";
+  }
+
+  document.getElementById("productModalOverlay").classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+function closeProductModal() {
+  document.getElementById("productModalOverlay").classList.remove("active");
+  document.body.style.overflow = "";
+}
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") closeProductModal();
+});

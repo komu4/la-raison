@@ -962,7 +962,7 @@ nav li.nav-active a {
 .blog-footer-btn .view-all-btn {
   display: inline-block;
   padding: 14px 45px;
-  background-color: var(--gold-dark); /* Using your gold variable */
+  background-color: #d4af37; /* Using your gold variable */
   color: #fff;
   text-decoration: none;
   border-radius: 8px;
@@ -1112,4 +1112,216 @@ nav li.nav-active a {
 .footer-bottom p {
   font-family: var(--font-body);
   color: var(--cream);
+}
+/* Clickable cursor on triggers */
+.lr-modal-trigger {
+  cursor: pointer;
+}
+
+/* Overlay */
+.lr-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.35s ease,
+    visibility 0.35s ease;
+}
+
+.lr-modal-overlay.lr-modal-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Modal card */
+.lr-modal {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  max-width: 760px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  transform: translateY(24px) scale(0.97);
+  transition: transform 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.lr-modal-overlay.lr-modal-open .lr-modal {
+  transform: translateY(0) scale(1);
+}
+
+/* Close button */
+.lr-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(4px);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: var(--transition);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+.lr-modal-close:hover {
+  background: var(--gold);
+  color: var(--white);
+  transform: rotate(90deg);
+}
+
+.lr-modal-close i {
+  font-size: 0.95rem;
+  color: var(--dark);
+}
+
+.lr-modal-close:hover i {
+  color: var(--white);
+}
+
+/* Image panel */
+.lr-modal-img-wrap {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #f0ede6;
+}
+
+.lr-modal-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.lr-modal-overlay.lr-modal-open .lr-modal-img-wrap img {
+  transform: scale(1.03);
+}
+
+/* Text panel */
+.lr-modal-body {
+  padding: 40px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+}
+
+.lr-modal-body h3 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--dark);
+  line-height: 1.2;
+}
+
+.lr-modal-body p {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+.lr-modal-cta {
+  align-self: flex-start;
+  margin-top: 6px;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* Responsive modal */
+@media (max-width: 620px) {
+  .lr-modal {
+    grid-template-columns: 1fr;
+    max-height: 88vh;
+    overflow-y: auto;
+  }
+
+  .lr-modal-img-wrap {
+    aspect-ratio: 16 / 9;
+  }
+
+  .lr-modal-body {
+    padding: 28px 24px;
+  }
+}
+
+/* blog */
+@keyframes lr-shimmer {
+  0% {
+    background-position: -600px 0;
+  }
+  100% {
+    background-position: 600px 0;
+  }
+}
+
+.skeleton-box,
+.skeleton-line {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e4e4e4 50%, #f0f0f0 75%);
+  background-size: 600px 100%;
+  animation: lr-shimmer 1.4s infinite linear;
+  border-radius: 6px;
+  display: block;
+}
+
+.blog-skeleton .blog-img-wrapper.skeleton-box {
+  height: 250px;
+  border-radius: 0;
+}
+
+.blog-skeleton .blog-content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 30px;
+}
+
+.skeleton-line {
+  height: 14px;
+  width: 100%;
+}
+.skeleton-line.short {
+  width: 40%;
+  height: 12px;
+}
+.skeleton-line.medium {
+  width: 70%;
+}
+
+.blog-error {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  color: #999;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+}
+
+.blog-error a {
+  color: var(--gold-dark);
+  text-decoration: underline;
+  cursor: pointer;
 }

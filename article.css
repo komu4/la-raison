@@ -1,0 +1,159 @@
+/* =============================================
+   ARTICLE PAGE STYLES
+   article.css — import alongside greentec.css
+============================================= */
+
+/* Back bar */
+.article-back-bar {
+    background: #f8fafc;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    padding: 16px 0;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--navy, #0f172a);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: var(--green-accent, #22c55e);
+}
+
+/* Article page wrapper */
+.article-page {
+    padding: 60px 5% 80px;
+    background: #fff;
+    min-height: 60vh;
+}
+
+/* Loading / error states */
+.article-loading,
+.article-error {
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+.article-error {
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--navy, #0f172a);
+}
+
+.article-error i {
+    font-size: 3rem;
+    color: #e2e8f0;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.article-error h2 {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+}
+
+.article-error p {
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+/* Article inner */
+.article-inner .container {
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+/* Header */
+.article-header {
+    margin-bottom: 40px;
+}
+
+.article-header h1 {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    color: var(--navy, #0f172a);
+    line-height: 1.25;
+    margin-bottom: 16px;
+}
+
+.article-header .article-meta {
+    font-size: 0.9rem;
+    color: #64748b;
+    font-weight: 400;
+}
+
+/* Cover image */
+.article-cover {
+    width: 100%;
+    height: 420px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 50px;
+    display: none;
+}
+
+/* Body text */
+.article-body {
+    font-size: 1.08rem;
+    line-height: 1.85;
+    color: #334155;
+}
+
+.article-body p {
+    margin-bottom: 1.4em;
+}
+
+.article-body h2 {
+    font-size: 1.6rem;
+    color: var(--navy, #0f172a);
+    margin: 2em 0 0.6em;
+}
+
+.article-body h3 {
+    font-size: 1.3rem;
+    color: var(--navy, #0f172a);
+    margin: 1.6em 0 0.5em;
+}
+
+.article-body blockquote {
+    border-left: 4px solid var(--green-accent, #22c55e);
+    padding: 16px 24px;
+    margin: 2em 0;
+    background: #f0fdf4;
+    border-radius: 0 12px 12px 0;
+    font-style: italic;
+    color: #475569;
+}
+
+.article-body strong { color: var(--navy, #0f172a); }
+
+/* CTA section */
+.article-cta-section {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a2f 100%);
+    padding: 80px 5%;
+    text-align: center;
+    color: white;
+}
+
+.article-cta-section h3 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.article-cta-section p {
+    color: #94a3b8;
+    margin-bottom: 30px;
+    font-size: 1.05rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .article-page { padding: 40px 5% 60px; }
+    .article-cover { height: 220px; }
+    .article-header h1 { font-size: 1.6rem; }
+}

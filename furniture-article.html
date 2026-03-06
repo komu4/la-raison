@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article | La Raison</title>
+
+    <link rel="Icon" href="images/LA RAISON LOGIMARK GOLD.png">
+    <link rel="stylesheet" href="furniture.css">
+    <link rel="stylesheet" href="furniture-article.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300&family=Outfit:wght@200;400;600&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2c173cbe17.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <header class="article-header">
+        <div class="hero-overlay"></div>
+        <nav>
+            <section>
+                <div class="sidebar-overlay" id="sidebarOverlay"></div>
+                <ul class="side-bar" id="sideBar">
+                    <li onclick="hideSideBar()"><a href="#"><i class="fa-solid fa-xmark"></i></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="furniture.html">Furniture</a></li>
+                    <li><a href="greentec.html">Greentec</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <ul>
+                    <li class="logo"><a href="furniture.html"><img src="images/FURNITURE GOLD.png" alt="Logo"></a></li>
+                    <li class="hideOnMobile"><a href="index.html">Home</a></li>
+                    <li class="hideOnMobile"><a href="about.html">About</a></li>
+                    <li class="hideOnMobile"><a href="furniture.html">Furniture</a></li>
+                    <li class="hideOnMobile"><a href="greentec.html">Greentec</a></li>
+                    <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+                    <li class="menu-btn" onclick="showsidebar()"><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+                </ul>
+            </section>
+        </nav>
+
+        <!-- Hero image fills this once post loads; fallback bg shown during load -->
+        <div class="article-hero-content" id="article-hero-content">
+            <span class="blog-tag" id="article-hero-tag"></span>
+            <h1 id="article-hero-title">
+                <span class="skeleton-line" style="width:60%;height:40px;display:inline-block;"></span>
+            </h1>
+            <p id="article-hero-date"></p>
+        </div>
+    </header>
+
+    <main>
+        <article class="article-body-wrap" id="article-body-wrap">
+
+            <!-- Loading state -->
+            <div class="article-loading" id="article-loading">
+                <span class="skeleton-line" style="width:100%;margin-bottom:12px;"></span>
+                <span class="skeleton-line" style="width:90%;margin-bottom:12px;"></span>
+                <span class="skeleton-line" style="width:95%;margin-bottom:12px;"></span>
+                <span class="skeleton-line" style="width:80%;margin-bottom:12px;"></span>
+                <span class="skeleton-line" style="width:100%;margin-bottom:12px;"></span>
+                <span class="skeleton-line" style="width:70%;margin-bottom:12px;"></span>
+            </div>
+
+            <!-- Post content renders here -->
+            <div class="article-content" id="article-content" style="display:none;"></div>
+
+        </article>
+
+        <!-- RELATED POSTS -->
+        <section class="related-section">
+            <div class="section-header">
+                <div class="header-content">
+                    <h2>More From The Journal</h2>
+                </div>
+            </div>
+            <div class="blog-grid related-grid" id="related-grid">
+                <article class="blog-card blog-skeleton">
+                    <div class="blog-img-wrapper skeleton-box"></div>
+                    <div class="blog-content">
+                        <span class="skeleton-line short"></span>
+                        <span class="skeleton-line"></span>
+                        <span class="skeleton-line medium"></span>
+                    </div>
+                </article>
+                <article class="blog-card blog-skeleton">
+                    <div class="blog-img-wrapper skeleton-box"></div>
+                    <div class="blog-content">
+                        <span class="skeleton-line short"></span>
+                        <span class="skeleton-line"></span>
+                        <span class="skeleton-line medium"></span>
+                    </div>
+                </article>
+                <article class="blog-card blog-skeleton">
+                    <div class="blog-img-wrapper skeleton-box"></div>
+                    <div class="blog-content">
+                        <span class="skeleton-line short"></span>
+                        <span class="skeleton-line"></span>
+                        <span class="skeleton-line medium"></span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- BACK LINK -->
+        <div class="article-back-wrap">
+            <a href="furniture-articles.html" class="blog-link article-back">
+                <i class="fa-solid fa-arrow-left-long"></i> Back to Journal
+            </a>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="footer-logo-section">
+                <div class="footer-brand-container">
+                    <img src="images/FURNITURE GOLD.png" alt="La Raison Logo" class="footer-logo-img">
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-columns">
+                <div class="footer-col">
+                    <h4>Our Products</h4>
+                    <ul>
+                        <li><a href="#">The Support Suite</a></li>
+                        <li><a href="#">The Sales Suite</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Top Features</h4>
+                    <ul>
+                        <li><a href="#">Ticketing System</a></li>
+                        <li><a href="#">Knowledge Base</a></li>
+                        <li><a href="#">Community Forums</a></li>
+                        <li><a href="#">Help Desk Software</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Product Support</a></li>
+                        <li><a href="#">Request Demo</a></li>
+                        <li><a href="#">Library</a></li>
+                        <li><a href="#">Peoplepower Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Investors</a></li>
+                        <li><a href="#">Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Favourite Things</h4>
+                    <ul>
+                        <li><a href="#">For Enterprise</a></li>
+                        <li><a href="#">For Startups</a></li>
+                        <li><a href="#">For Benchmark</a></li>
+                        <li><a href="#">For Small Business</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© La Raison 2026 - All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init({ once: true, offset: 100, duration: 800, easing: 'ease-out-cubic' });
+    </script>
+
+    <script>
+        /* =============================================
+           ARTICLE PAGE — SANITY CMS FETCH
+           ============================================= */
+        (function () {
+            // ⚠️ REPLACE THESE WITH YOUR REAL VALUES
+            const SANITY_PROJECT_ID = 'z6db0zm1';
+            const SANITY_DATASET = 'production';
+
+            function apiUrl(query) {
+                return `https://${SANITY_PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${SANITY_DATASET}?query=${encodeURIComponent(query)}`;
+            }
+
+            function formatDate(iso) {
+                return new Date(iso).toLocaleDateString('en-US', {
+                    year: 'numeric', month: 'long', day: 'numeric'
+                });
+            }
+
+            // Sanity Portable Text → simple HTML renderer
+            function renderBody(blocks) {
+                if (!blocks || !Array.isArray(blocks)) return '<p>No content available.</p>';
+                return blocks.map(block => {
+                    if (block._type === 'image') {
+                        const url = block.asset?._ref
+                            ? `https://cdn.sanity.io/images/${SANITY_PROJECT_ID}/${SANITY_DATASET}/${block.asset._ref.replace('image-', '').replace(/-(\w+)$/, '.$1')}?w=1000&auto=format`
+                            : '';
+                        return url ? `<figure class="article-figure"><img src="${url}" alt="${block.alt || ''}" loading="lazy"></figure>` : '';
+                    }
+                    if (block._type !== 'block') return '';
+                    const styleMap = { h1: 'h1', h2: 'h2', h3: 'h3', h4: 'h4', blockquote: 'blockquote', normal: 'p' };
+                    const tag = styleMap[block.style] || 'p';
+                    const inner = (block.children || []).map(span => {
+                        let text = span.text || '';
+                        if (span.marks?.includes('strong')) text = `<strong>${text}</strong>`;
+                        if (span.marks?.includes('em')) text = `<em>${text}</em>`;
+                        return text;
+                    }).join('');
+                    return `<${tag}>${inner}</${tag}>`;
+                }).join('');
+            }
+
+            function renderRelatedCard(post, delay) {
+                const slug = post.slug?.current || '#';
+                const href = `article.html?slug=${slug}`;
+                const date = post.publishedAt ? formatDate(post.publishedAt) : '';
+                const imgSrc = post.imageUrl
+                    ? `${post.imageUrl}?w=800&q=80&auto=format`
+                    : 'images/la raison.jpg';
+                return `
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="${delay}">
+                    <div class="blog-img-wrapper">
+                        <img src="${imgSrc}" alt="${post.title}" loading="lazy">
+                        <span class="blog-tag">${post.tag || ''}</span>
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">${date}</span>
+                        <h3>${post.title}</h3>
+                        <p>${post.excerpt || ''}</p>
+                        <a href="${href}" class="blog-link">Read More <i class="fa-solid fa-arrow-right-long"></i></a>
+                    </div>
+                </article>`;
+            }
+
+            async function loadPost() {
+                const params = new URLSearchParams(window.location.search);
+                const slug = params.get('slug');
+
+                if (!slug) {
+                    window.location.href = 'articles.html';
+                    return;
+                }
+
+                // Fetch the single post
+                const postQuery = `*[_type == "post" && slug.current == "${slug}"][0]{
+                title, slug, tag, excerpt, publishedAt,
+                "imageUrl": mainImage.asset->url,
+                body[]{ ..., asset-> }
+            }`;
+
+                try {
+                    const res = await fetch(apiUrl(postQuery));
+                    if (!res.ok) throw new Error(res.status);
+                    const { result: post } = await res.json();
+
+                    if (!post) {
+                        document.getElementById('article-loading').innerHTML =
+                            '<div class="blog-error"><p>Post not found. <a href="articles.html">Back to Journal</a></p></div>';
+                        return;
+                    }
+
+                    // Update page title
+                    document.title = `${post.title} | La Raison`;
+
+                    // Hero
+                    if (post.imageUrl) {
+                        document.querySelector('.article-header').style.backgroundImage =
+                            `url('${post.imageUrl}?w=1600&q=80&auto=format')`;
+                    }
+                    document.getElementById('article-hero-tag').textContent = post.tag || '';
+                    document.getElementById('article-hero-title').textContent = post.title;
+                    document.getElementById('article-hero-date').textContent = post.publishedAt
+                        ? formatDate(post.publishedAt) : '';
+
+                    // Body
+                    const bodyHtml = renderBody(post.body);
+                    const contentEl = document.getElementById('article-content');
+                    contentEl.innerHTML = bodyHtml;
+                    document.getElementById('article-loading').style.display = 'none';
+                    contentEl.style.display = 'block';
+
+                    // Related posts (same tag, excluding current)
+                    const relatedQuery = `*[_type == "post" && tag == "${post.tag}" && slug.current != "${slug}"] | order(publishedAt desc) [0..2] {
+                    title, slug, tag, excerpt, publishedAt,
+                    "imageUrl": mainImage.asset->url
+                }`;
+                    const relRes = await fetch(apiUrl(relatedQuery));
+                    const { result: related } = await relRes.json();
+                    const relGrid = document.getElementById('related-grid');
+                    if (related && related.length > 0) {
+                        relGrid.innerHTML = related.map((p, i) => renderRelatedCard(p, i * 100 + 100)).join('');
+                    } else {
+                        relGrid.closest('.related-section').style.display = 'none';
+                    }
+
+                    if (typeof AOS !== 'undefined') AOS.refresh();
+
+                } catch (err) {
+                    console.error('Article fetch failed:', err);
+                    document.getElementById('article-loading').innerHTML =
+                        '<div class="blog-error"><p>Could not load post. <a href="articles.html">Back to Journal</a></p></div>';
+                }
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', loadPost);
+            } else {
+                loadPost();
+            }
+        })();
+    </script>
+</body>
+
+</html>

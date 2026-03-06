@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal | La Raison</title>
+
+    <link rel="Icon" href="images/LA RAISON LOGIMARK GOLD.png">
+    <link rel="stylesheet" href="furniture.css">
+    <link rel="stylesheet" href="furniture-articles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300&family=Outfit:wght@200;400;600&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2c173cbe17.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <header class="articles-header">
+        <div class="hero-overlay"></div>
+        <nav>
+            <section>
+                <div class="sidebar-overlay" id="sidebarOverlay"></div>
+                <ul class="side-bar" id="sideBar">
+                    <li onclick="hideSideBar()"><a href="#"><i class="fa-solid fa-xmark"></i></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="furniture.html">Furniture</a></li>
+                    <li><a href="greentec.html">Greentec</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <ul>
+                    <li class="logo"><a href="furniture.html"><img src="images/FURNITURE GOLD.png" alt="Logo"></a></li>
+                    <li class="hideOnMobile"><a href="index.html">Home</a></li>
+                    <li class="hideOnMobile"><a href="about.html">About</a></li>
+                    <li class="hideOnMobile"><a href="furniture.html">Furniture</a></li>
+                    <li class="hideOnMobile"><a href="greentec.html">Greentec</a></li>
+                    <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+                    <li class="menu-btn" onclick="showsidebar()"><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+                </ul>
+            </section>
+        </nav>
+
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1200">
+            <h1>Our Journal</h1>
+            <p>Insights into luxury interior design and sustainable living.</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- TAG FILTER -->
+        <section class="articles-filter-section">
+            <div class="articles-filter-bar" id="articles-filter-bar">
+                <button class="filter-btn active" data-tag="all">All</button>
+                <button class="filter-btn" data-tag="Interior">Interior</button>
+                <button class="filter-btn" data-tag="Sustainability">Sustainability</button>
+                <button class="filter-btn" data-tag="Solar">Solar</button>
+                <button class="filter-btn" data-tag="Design">Design</button>
+                <button class="filter-btn" data-tag="Lifestyle">Lifestyle</button>
+            </div>
+        </section>
+
+        <!-- BLOG GRID -->
+        <section class="articles-section">
+            <div class="blog-grid articles-grid" id="articles-grid">
+                <!-- Skeletons shown while loading -->
+                <article class="blog-card blog-skeleton">
+                    <div class="blog-img-wrapper skeleton-box"></div>
+                    <div class="blog-content">
+                        <span class="skeleton-line short"></span>
+                        <span class="skeleton-line"></span>
+                        <span class="skeleton-line medium"></span>
+                    </div>
+                </article>
+                <article class="blog-card blog-skeleton">
+                    <div class="blog-img-wrapper skeleton-box"></div>
+                    <div class="blog-content">
+                        <span class="skeleton-line short"></span>
+                        <span class="skeleton-line"></span>
+                        <span class="skeleton-line medium"></span>
+                    </div>
+                </article>
+                <article class="blog-card blog-skeleton">
+                    <div class="blog-img-wrapper skeleton-box"></div>
+                    <div class="blog-content">
+                        <span class="skeleton-line short"></span>
+                        <span class="skeleton-line"></span>
+                        <span class="skeleton-line medium"></span>
+                    </div>
+                </article>
+                <article class="blog-card blog-skeleton">
+                    <div class="blog-img-wrapper skeleton-box"></div>
+                    <div class="blog-content">
+                        <span class="skeleton-line short"></span>
+                        <span class="skeleton-line"></span>
+                        <span class="skeleton-line medium"></span>
+                    </div>
+                </article>
+                <article class="blog-card blog-skeleton">
+                    <div class="blog-img-wrapper skeleton-box"></div>
+                    <div class="blog-content">
+                        <span class="skeleton-line short"></span>
+                        <span class="skeleton-line"></span>
+                        <span class="skeleton-line medium"></span>
+                    </div>
+                </article>
+                <article class="blog-card blog-skeleton">
+                    <div class="blog-img-wrapper skeleton-box"></div>
+                    <div class="blog-content">
+                        <span class="skeleton-line short"></span>
+                        <span class="skeleton-line"></span>
+                        <span class="skeleton-line medium"></span>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Load more -->
+            <div class="articles-load-more" id="load-more-wrap">
+                <button class="btn-gold" id="load-more-btn" style="display:none;">
+                    Load More
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="footer-logo-section">
+                <div class="footer-brand-container">
+                    <img src="images/FURNITURE GOLD.png" alt="La Raison Logo" class="footer-logo-img">
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-columns">
+                <div class="footer-col">
+                    <h4>Our Products</h4>
+                    <ul>
+                        <li><a href="#">The Support Suite</a></li>
+                        <li><a href="#">The Sales Suite</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Top Features</h4>
+                    <ul>
+                        <li><a href="#">Ticketing System</a></li>
+                        <li><a href="#">Knowledge Base</a></li>
+                        <li><a href="#">Community Forums</a></li>
+                        <li><a href="#">Help Desk Software</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Product Support</a></li>
+                        <li><a href="#">Request Demo</a></li>
+                        <li><a href="#">Library</a></li>
+                        <li><a href="#">Peoplepower Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Investors</a></li>
+                        <li><a href="#">Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Favourite Things</h4>
+                    <ul>
+                        <li><a href="#">For Enterprise</a></li>
+                        <li><a href="#">For Startups</a></li>
+                        <li><a href="#">For Benchmark</a></li>
+                        <li><a href="#">For Small Business</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© La Raison 2026 - All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init({ once: true, offset: 100, duration: 800, easing: 'ease-out-cubic' });
+    </script>
+
+    <script>
+        /* =============================================
+           ARTICLES PAGE — SANITY CMS FETCH
+           ============================================= */
+        (function () {
+            // ⚠️ REPLACE THESE WITH YOUR REAL VALUES
+            const SANITY_PROJECT_ID = 'z6db0zm1';
+            const SANITY_DATASET = 'production';
+
+            const PAGE_SIZE = 6;
+            let currentTag = 'all';
+            let allPosts = [];
+            let displayed = 0;
+
+            function buildApiUrl() {
+                const q = encodeURIComponent(`
+                *[_type == "post"] | order(publishedAt desc) {
+                    title,
+                    slug,
+                    tag,
+                    excerpt,
+                    publishedAt,
+                    "imageUrl": mainImage.asset->url
+                }
+            `);
+                return `https://${SANITY_PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${SANITY_DATASET}?query=${q}`;
+            }
+
+            function formatDate(iso) {
+                return new Date(iso).toLocaleDateString('en-US', {
+                    year: 'numeric', month: 'long', day: 'numeric'
+                });
+            }
+
+            function renderCard(post, delay) {
+                const slug = post.slug?.current || '#';
+                const href = `article.html?slug=${slug}`;
+                const date = post.publishedAt ? formatDate(post.publishedAt) : '';
+                const imgSrc = post.imageUrl
+                    ? `${post.imageUrl}?w=800&q=80&auto=format`
+                    : 'images/la raison.jpg';
+                return `
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="${delay}" data-tag="${post.tag || ''}">
+                    <div class="blog-img-wrapper">
+                        <img src="${imgSrc}" alt="${post.title}" loading="lazy">
+                        <span class="blog-tag">${post.tag || ''}</span>
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">${date}</span>
+                        <h3>${post.title}</h3>
+                        <p>${post.excerpt || ''}</p>
+                        <a href="${href}" class="blog-link">Read More <i class="fa-solid fa-arrow-right-long"></i></a>
+                    </div>
+                </article>`;
+            }
+
+            function getFiltered() {
+                return currentTag === 'all'
+                    ? allPosts
+                    : allPosts.filter(p => p.tag === currentTag);
+            }
+
+            function renderPage(reset) {
+                const grid = document.getElementById('articles-grid');
+                const btn = document.getElementById('load-more-btn');
+                const filtered = getFiltered();
+
+                if (reset) {
+                    grid.innerHTML = '';
+                    displayed = 0;
+                }
+
+                if (filtered.length === 0) {
+                    grid.innerHTML = `<div class="blog-error" style="grid-column:1/-1"><p>No posts found for this category.</p></div>`;
+                    btn.style.display = 'none';
+                    return;
+                }
+
+                const slice = filtered.slice(displayed, displayed + PAGE_SIZE);
+                slice.forEach((post, i) => {
+                    grid.insertAdjacentHTML('beforeend', renderCard(post, (i % 3) * 100 + 100));
+                });
+                displayed += slice.length;
+
+                btn.style.display = displayed < filtered.length ? 'inline-block' : 'none';
+                if (typeof AOS !== 'undefined') AOS.refresh();
+            }
+
+            async function init() {
+                const grid = document.getElementById('articles-grid');
+                try {
+                    const res = await fetch(buildApiUrl());
+                    if (!res.ok) throw new Error(res.status);
+                    const { result } = await res.json();
+                    allPosts = result || [];
+                    renderPage(true);
+                } catch (err) {
+                    console.error('Articles fetch failed:', err);
+                    grid.innerHTML = `<div class="blog-error" style="grid-column:1/-1"><p>Could not load posts. Please try again later.</p></div>`;
+                }
+            }
+
+            // Filter buttons
+            document.getElementById('articles-filter-bar').addEventListener('click', function (e) {
+                const btn = e.target.closest('.filter-btn');
+                if (!btn) return;
+                document.querySelectorAll('#articles-filter-bar .filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentTag = btn.dataset.tag;
+                renderPage(true);
+            });
+
+            // Load more
+            document.getElementById('load-more-btn').addEventListener('click', function () {
+                renderPage(false);
+            });
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', init);
+            } else {
+                init();
+            }
+        })();
+    </script>
+</body>
+
+</html>

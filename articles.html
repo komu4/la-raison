@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles | La Raison Green Tec</title>
+    <link rel="icon" href="images/LA RAISON LOGIMARK GOLD.png">
+    <link rel="stylesheet" href="greentec.css">
+    <link rel="stylesheet" href="article.css">
+    <script src="https://kit.fontawesome.com/2c173cbe17.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Outfit:wght@200;300;400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        .articles-hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a2f 100%);
+            padding: 120px 5% 70px;
+            text-align: center;
+            color: white;
+        }
+
+        .articles-hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 14px;
+        }
+
+        .articles-hero p {
+            color: #94a3b8;
+            font-size: 1.1rem;
+        }
+
+        .articles-listing {
+            padding: 80px 5%;
+            background: #f8fafc;
+        }
+
+        .articles-listing .blog-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .articles-listing .blog-card {
+            cursor: pointer;
+        }
+
+        #no-articles {
+            text-align: center;
+            color: #64748b;
+            padding: 60px 0;
+            font-size: 1.1rem;
+            grid-column: 1/-1;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <section class="nav-container">
+                <div class="sidebar-overlay" id="sidebarOverlay"></div>
+                <ul class="side-bar" id="sideBar">
+                    <li onclick="hideSideBar()"><a href="#"><i class="fa-solid fa-xmark"></i></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="furniture.html">Furniture</a></li>
+                    <li><a href="greentec.html">Greentec</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="logo"><a href="greentec.html"><img src="images/GREENTEC WHITE (2).png" alt="Logo"></a></div>
+                <ul class="ul-li">
+                    <li class="hideOnMobile"><a href="index.html">Home</a></li>
+                    <li class="hideOnMobile"><a href="about.html">About</a></li>
+                    <li class="hideOnMobile"><a href="furniture.html">Furniture</a></li>
+                    <li class="hideOnMobile nav-active"><a href="greentec.html">Greentec</a></li>
+                    <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+                    <li class="menu-btn" onclick="showsidebar()"><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+                </ul>
+                <a href="contact.html" class="cta-btn hideOnMobile">Get a Quote</a>
+            </section>
+        </nav>
+    </header>
+
+    <main>
+        <div class="articles-hero">
+            <h1>Articles & Blog Posts</h1>
+            <p>Tips, guides, and insights on solar energy and green technology</p>
+        </div>
+
+        <section class="articles-listing">
+            <div class="blog-grid" id="articles-grid">
+                <!-- Skeletons -->
+                <div class="blog-card skeleton-card">
+                    <div class="card-image skeleton-image"></div>
+                    <div class="card-body">
+                        <div class="skeleton-line wide"></div>
+                        <div class="skeleton-line narrow"></div>
+                        <div class="skeleton-line medium"></div>
+                    </div>
+                </div>
+                <div class="blog-card skeleton-card">
+                    <div class="card-image skeleton-image"></div>
+                    <div class="card-body">
+                        <div class="skeleton-line wide"></div>
+                        <div class="skeleton-line narrow"></div>
+                        <div class="skeleton-line medium"></div>
+                    </div>
+                </div>
+                <div class="blog-card skeleton-card">
+                    <div class="card-image skeleton-image"></div>
+                    <div class="card-body">
+                        <div class="skeleton-line wide"></div>
+                        <div class="skeleton-line narrow"></div>
+                        <div class="skeleton-line medium"></div>
+                    </div>
+                </div>
+            </div>
+            <p id="no-articles">No articles published yet. Check back soon!</p>
+        </section>
+
+        <section class="article-cta-section">
+            <div class="container">
+                <h3>Ready for clean energy?</h3>
+                <p>Let our team design a custom solar solution for your home or business.</p>
+                <a href="contact.html" class="cta-btn">Get a Free Quote</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 class="footer-heading">MENU</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="articles.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Working Hours</h4>
+                    <p class="footer-info">Mon - Fri: 8am - 6pm</p>
+                    <h4 class="footer-heading serving-title">Serving In</h4>
+                    <ul class="footer-links">
+                        <li>Lagos</li>
+                        <li>Abuja</li>
+                        <li>Benin</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">How Solar Works</a></li>
+                        <li><a href="articles.html">Blog</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; Copyright - Greentec Solar | 2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const SANITY_PROJECT_ID = 'n93vwln4'; // 🔧 Replace this
+        const SANITY_DATASET = 'production';
+        const SANITY_API_VERSION = '2024-01-01';
+
+        function sanityImageUrl(ref) {
+            if (!ref) return 'images/SaveClip.App_610691468_18032358650753425_92978694623967760_n.jpg';
+            const [, id, dimensions, format] = ref.split('-');
+            return `https://cdn.sanity.io/images/${SANITY_PROJECT_ID}/${SANITY_DATASET}/${id}-${dimensions}.${format}`;
+        }
+
+        function formatDate(dateStr) {
+            if (!dateStr) return '';
+            return new Date(dateStr).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+        }
+
+        async function loadAllArticles() {
+            const grid = document.getElementById('articles-grid');
+            const query = encodeURIComponent(
+                `*[_type == "post"] | order(publishedAt desc) {
+                    _id, title, slug, publishedAt,
+                    "excerpt": pt::text(body)[0..160],
+                    "author": author->name,
+                    "coverImage": mainImage.asset._ref
+                }`
+            );
+            const url = `https://${SANITY_PROJECT_ID}.api.sanity.io/v${SANITY_API_VERSION}/data/query/${SANITY_DATASET}?query=${query}`;
+
+            try {
+                const res = await fetch(url);
+                const data = await res.json();
+                const posts = data.result;
+
+                if (!posts || posts.length === 0) {
+                    grid.innerHTML = '';
+                    document.getElementById('no-articles').style.display = 'block';
+                    return;
+                }
+
+                grid.innerHTML = posts.map(post => `
+                    <article class="blog-card" onclick="window.location='article.html?slug=${post.slug.current}'" style="cursor:pointer;">
+                        <div class="card-image" style="background-image:url('${sanityImageUrl(post.coverImage)}');"></div>
+                        <div class="card-body">
+                            <h3 class="article-title">${post.title}</h3>
+                            <div class="article-meta">${formatDate(post.publishedAt)}${post.author ? ' • by ' + post.author : ''}</div>
+                            <p class="article-excerpt">${post.excerpt || ''}</p>
+                            <a href="article.html?slug=${post.slug.current}" class="read-more">Read More</a>
+                        </div>
+                    </article>
+                `).join('');
+            } catch (err) {
+                console.error('Failed to load articles:', err);
+                grid.innerHTML = '';
+                document.getElementById('no-articles').style.display = 'block';
+            }
+        }
+
+        loadAllArticles();
+    </script>
+
+</body>
+
+</html>

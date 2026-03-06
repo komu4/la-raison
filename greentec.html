@@ -177,70 +177,93 @@
                     <div class="swiper product-slider">
                         <div class="swiper-wrapper">
 
-                            <article class="product-card swiper-slide">
+                            <article class="product-card swiper-slide" data-img="images/solar-kit.jpg"
+                                data-badge="Best Seller" data-cat="Starter Kit" data-title="Solar Starter Kit"
+                                data-price="&#8358;85,000"
+                                data-desc="A complete entry-level solar setup ideal for small homes and apartments. Includes monocrystalline panels, a pure sine wave inverter, and all mounting hardware for a clean installation."
+                                data-specs='[["Capacity","1.5kWh"],["Panel Type","Monocrystalline"],["Inverter","1kVA Pure Sine"],["Warranty","2 Years"]]'>
+                                <div class="product-badge">Best Seller</div>
                                 <div class="product-image" style="background-image:url('images/solar-kit.jpg');"></div>
                                 <div class="product-body">
+                                    <span class="product-category">Starter Kit</span>
                                     <h3>Solar Starter Kit</h3>
-                                    <p class="price">₦85,000</p>
-                                    <a href="product-detail.html" class="product-cta">View</a>
+                                    <p class="price">&#8358;85,000</p>
+                                    <a href="#" class="product-cta"
+                                        onclick="openProductModal(this.closest('article')); return false;">
+                                        View Details <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
                                 </div>
                             </article>
 
-                            <article class="product-card swiper-slide">
+                            <article class="product-card swiper-slide" data-img="images/solar-panel_2196335.png"
+                                data-cat="Battery Storage" data-title="Li-ion Storage 5kWh" data-price="&#8358;250,000"
+                                data-desc="High-performance lithium-ion battery storage providing reliable 24/7 power for homes and offices. Smart BMS protection included for safe operation."
+                                data-specs='[["Capacity","5kWh"],["Chemistry","LiFePO4"],["Cycles","3000+"],["Warranty","3 Years"]]'>
                                 <div class="product-image"
-                                    style="background-image:url('images/solar-panel_2196335.png');">
-                                </div>
+                                    style="background-image:url('images/solar-panel_2196335.png');"></div>
                                 <div class="product-body">
+                                    <span class="product-category">Battery Storage</span>
                                     <h3>Li-ion Storage 5kWh</h3>
-                                    <p class="price">₦250,000</p>
-                                    <a href="product-detail.html" class="product-cta">View</a>
+                                    <p class="price">&#8358;250,000</p>
+                                    <a href="#" class="product-cta"
+                                        onclick="openProductModal(this.closest('article')); return false;">
+                                        View Details <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
                                 </div>
                             </article>
 
-                            <article class="product-card swiper-slide">
+                            <article class="product-card swiper-slide" data-img="images/solar-panel_2196335.png"
+                                data-badge="New" data-cat="Solar Panel" data-title="Monocrystalline 400W"
+                                data-price="&#8358;120,000"
+                                data-desc="High-efficiency monocrystalline panels with anti-reflective coating and a 25-year performance warranty. Ideal for rooftop installations in residential and commercial properties."
+                                data-specs='[["Power Output","400W"],["Efficiency","21.5%"],["Cell Type","Monocrystalline"],["Warranty","25 Years"]]'>
+                                <div class="product-badge new-badge">New</div>
                                 <div class="product-image"
-                                    style="background-image:url('images/solar-panel_2196335.png');">
-                                </div>
+                                    style="background-image:url('images/solar-panel_2196335.png');"></div>
                                 <div class="product-body">
-                                    <h3>Li-ion Storage 5kWh</h3>
-                                    <p class="price">₦250,000</p>
-                                    <a href="product-detail.html" class="product-cta">View</a>
+                                    <span class="product-category">Solar Panel</span>
+                                    <h3>Monocrystalline 400W</h3>
+                                    <p class="price">&#8358;120,000</p>
+                                    <a href="#" class="product-cta"
+                                        onclick="openProductModal(this.closest('article')); return false;">
+                                        View Details <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
                                 </div>
                             </article>
 
-                            <article class="product-card swiper-slide">
+                            <article class="product-card swiper-slide" data-img="images/solar-panel_2196335.png"
+                                data-cat="Inverter" data-title="Hybrid Inverter 5kVA" data-price="&#8358;180,000"
+                                data-desc="Smart hybrid inverter with both grid-tie and off-grid capability. Compatible with lithium and lead-acid batteries. Features a built-in MPPT solar charge controller."
+                                data-specs='[["Capacity","5kVA"],["Type","Hybrid MPPT"],["Battery Compat.","Li-ion / Lead-acid"],["Warranty","2 Years"]]'>
                                 <div class="product-image"
-                                    style="background-image:url('images/solar-panel_2196335.png');">
-                                </div>
+                                    style="background-image:url('images/solar-panel_2196335.png');"></div>
                                 <div class="product-body">
-                                    <h3>Li-ion Storage 5kWh</h3>
-                                    <p class="price">₦250,000</p>
-                                    <a href="product-detail.html" class="product-cta">View</a>
+                                    <span class="product-category">Inverter</span>
+                                    <h3>Hybrid Inverter 5kVA</h3>
+                                    <p class="price">&#8358;180,000</p>
+                                    <a href="#" class="product-cta"
+                                        onclick="openProductModal(this.closest('article')); return false;">
+                                        View Details <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
                                 </div>
                             </article>
 
-                            <article class="product-card swiper-slide">
+                            <article class="product-card swiper-slide" data-img="images/solar-panel_2196335.png"
+                                data-cat="Battery Storage" data-title="Li-ion Storage 10kWh" data-price="&#8358;450,000"
+                                data-desc="Industrial-grade lithium battery bank built for commercial properties and large residential setups. Stackable design allows future capacity expansion."
+                                data-specs='[["Capacity","10kWh"],["Chemistry","LiFePO4"],["Cycles","4000+"],["Warranty","5 Years"]]'>
                                 <div class="product-image"
-                                    style="background-image:url('images/solar-panel_2196335.png');">
-                                </div>
+                                    style="background-image:url('images/solar-panel_2196335.png');"></div>
                                 <div class="product-body">
-                                    <h3>Li-ion Storage 5kWh</h3>
-                                    <p class="price">₦250,000</p>
-                                    <a href="product-detail.html" class="product-cta">View</a>
+                                    <span class="product-category">Battery Storage</span>
+                                    <h3>Li-ion Storage 10kWh</h3>
+                                    <p class="price">&#8358;450,000</p>
+                                    <a href="#" class="product-cta"
+                                        onclick="openProductModal(this.closest('article')); return false;">
+                                        View Details <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
                                 </div>
                             </article>
-
-                            <article class="product-card swiper-slide">
-                                <div class="product-image"
-                                    style="background-image:url('images/solar-panel_2196335.png');">
-                                </div>
-                                <div class="product-body">
-                                    <h3>Li-ion Storage 5kWh</h3>
-                                    <p class="price">₦250,000</p>
-                                    <a href="product-detail.html" class="product-cta">View</a>
-                                </div>
-                            </article>
-
                         </div>
 
                         <div class="swiper-pagination"></div>
@@ -259,47 +282,36 @@
                         <h2 class="sub-label">READ THE BLOG</h2>
                         <h4 class="section-title">Articles & Blog Posts with Useful Information</h4>
                     </div>
-                    <a href="#" class="btn-view-all">VIEW ALL ARTICLES</a>
+                    <a href="articles.html" class="btn-view-all">VIEW ALL ARTICLES</a>
                 </div>
 
-                <div class="blog-grid">
-
-                    <article class="blog-card">
-                        <div class="card-image img-blog-1"></div>
+                <!-- Articles are loaded dynamically from Sanity CMS -->
+                <div class="blog-grid" id="blog-grid">
+                    <!-- Loading skeletons -->
+                    <div class="blog-card skeleton-card">
+                        <div class="card-image skeleton-image"></div>
                         <div class="card-body">
-                            <h3 class="article-title">Heat Pump for a Garden Swimming Pool</h3>
-                            <div class="article-meta">26 March 2024 • by Robert</div>
-                            <p class="article-excerpt">Maecenas placerat erat quis diam cursus auctor donec fermentum
-                                laoreet
-                                felis, nec vestibulum leo dictum.</p>
-                            <a href="#" class="read-more">Read More</a>
+                            <div class="skeleton-line wide"></div>
+                            <div class="skeleton-line narrow"></div>
+                            <div class="skeleton-line medium"></div>
                         </div>
-                    </article>
-
-                    <article class="blog-card">
-                        <div class="card-image img-blog-2"></div>
+                    </div>
+                    <div class="blog-card skeleton-card">
+                        <div class="card-image skeleton-image"></div>
                         <div class="card-body">
-                            <h3 class="article-title">Photovoltaics with Energy Storage</h3>
-                            <div class="article-meta">18 March 2024 • by Robert</div>
-                            <p class="article-excerpt">Curabitur venenatis magna lorem, quis elementum erat pharetra
-                                faucibus
-                                diam orci, a varius urna pharetra.</p>
-                            <a href="#" class="read-more">Read More</a>
+                            <div class="skeleton-line wide"></div>
+                            <div class="skeleton-line narrow"></div>
+                            <div class="skeleton-line medium"></div>
                         </div>
-                    </article>
-
-                    <article class="blog-card">
-                        <div class="card-image img-blog-3"></div>
+                    </div>
+                    <div class="blog-card skeleton-card">
+                        <div class="card-image skeleton-image"></div>
                         <div class="card-body">
-                            <h3 class="article-title">Energy Balancing Thanks to DHW Heating</h3>
-                            <div class="article-meta">06 March 2024 • by Robert</div>
-                            <p class="article-excerpt">Aenean commodo est et vestibulum tempus suspendisse mattis rutrum
-                                sem,
-                                vel sollicitudin massa blandit.</p>
-                            <a href="#" class="read-more">Read More</a>
+                            <div class="skeleton-line wide"></div>
+                            <div class="skeleton-line narrow"></div>
+                            <div class="skeleton-line medium"></div>
                         </div>
-                    </article>
-
+                    </div>
                 </div>
             </div>
         </section>
@@ -431,7 +443,91 @@
         </div>
     </footer>
 
+    <!-- PRODUCT DETAIL MODAL -->
+    <div class="product-modal-overlay" id="productModalOverlay" onclick="closeProductModal()">
+        <div class="product-modal" id="productModal" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeProductModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-inner">
+                <div class="modal-image" id="modalImage"></div>
+                <div class="modal-content">
+                    <div id="modalTopBadges"></div>
+                    <span class="modal-category" id="modalCategory"></span>
+                    <h2 id="modalTitle"></h2>
+                    <p class="modal-price" id="modalPrice"></p>
+                    <p class="modal-desc" id="modalDesc"></p>
+                    <div class="modal-specs" id="modalSpecs"></div>
+                    <div class="modal-actions">
+                        <a href="contact.html" class="cta-btn">Get a Quote</a>
+                        <a href="greentec-gallery.html" class="modal-catalog-link">View Full Catalog <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- sanity script-->
+    <script>
+        const SANITY_PROJECT_ID = 'n93vwln4'; // 🔧 Replace this
+        const SANITY_DATASET = 'production';
+        const SANITY_API_VERSION = '2024-01-01';
+
+        function sanityImageUrl(ref) {
+            if (!ref) return 'images/SaveClip.App_610691468_18032358650753425_92978694623967760_n.jpg';
+            const [, id, dimensions, format] = ref.split('-');
+            return `https://cdn.sanity.io/images/${SANITY_PROJECT_ID}/${SANITY_DATASET}/${id}-${dimensions}.${format}`;
+        }
+
+        function formatDate(dateStr) {
+            if (!dateStr) return '';
+            const d = new Date(dateStr);
+            return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+        }
+
+        async function loadBlogPosts() {
+            const grid = document.getElementById('blog-grid');
+            const query = encodeURIComponent(
+                `*[_type == "post"] | order(publishedAt desc) [0..2] {
+                        _id, title, slug, publishedAt,
+                        "excerpt": pt::text(body)[0..160],
+                        "author": author->name,
+                        "coverImage": mainImage.asset._ref
+                    }`
+            );
+            const url = `https://${SANITY_PROJECT_ID}.api.sanity.io/v${SANITY_API_VERSION}/data/query/${SANITY_DATASET}?query=${query}`;
+
+            try {
+                const res = await fetch(url);
+                const data = await res.json();
+                const posts = data.result;
+
+                if (!posts || posts.length === 0) {
+                    grid.innerHTML = `<p style="color:#666; grid-column:1/-1; text-align:center;">No articles published yet.</p>`;
+                    return;
+                }
+
+                grid.innerHTML = posts.map(post => `
+                        <article class="blog-card" onclick="window.location='article.html?slug=${post.slug.current}'" style="cursor:pointer;">
+                            <div class="card-image" style="background-image:url('${sanityImageUrl(post.coverImage)}');"></div>
+                            <div class="card-body">
+                                <h3 class="article-title">${post.title}</h3>
+                                <div class="article-meta">${formatDate(post.publishedAt)}${post.author ? ' • by ' + post.author : ''}</div>
+                                <p class="article-excerpt">${post.excerpt || ''}</p>
+                                <a href="article.html?slug=${post.slug.current}" class="read-more">Read More</a>
+                            </div>
+                        </article>
+                    `).join('');
+
+            } catch (err) {
+                console.error('Failed to load articles:', err);
+                grid.innerHTML = `<p style="color:#666; grid-column:1/-1; text-align:center;">Could not load articles. Check your Sanity Project ID.</p>`;
+            }
+        }
+
+        loadBlogPosts();
+    </script>
 </body>
 
 </html>

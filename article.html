@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article | La Raison Green Tec</title>
+    <link rel="icon" href="images/LA RAISON LOGIMARK GOLD.png">
+    <link rel="stylesheet" href="greentec.css">
+    <link rel="stylesheet" href="article.css">
+    <script src="https://kit.fontawesome.com/2c173cbe17.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Outfit:wght@200;300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <section class="nav-container">
+                <div class="sidebar-overlay" id="sidebarOverlay"></div>
+                <ul class="side-bar" id="sideBar">
+                    <li onclick="hideSideBar()"><a href="#"><i class="fa-solid fa-xmark"></i></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="furniture.html">Furniture</a></li>
+                    <li><a href="greentec.html">Greentec</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="logo"><a href="greentec.html"><img src="images/GREENTEC WHITE (2).png" alt="Logo"></a></div>
+                <ul class="ul-li">
+                    <li class="hideOnMobile"><a href="index.html">Home</a></li>
+                    <li class="hideOnMobile"><a href="about.html">About</a></li>
+                    <li class="hideOnMobile"><a href="furniture.html">Furniture</a></li>
+                    <li class="hideOnMobile nav-active"><a href="greentec.html">Greentec</a></li>
+                    <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+                    <li class="menu-btn" onclick="showsidebar()"><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+                </ul>
+                <a href="contact.html" class="cta-btn hideOnMobile">Get a Quote</a>
+            </section>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Back button -->
+        <div class="article-back-bar">
+            <div class="container">
+                <a href="greentec.html#blog" class="back-link">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Articles
+                </a>
+            </div>
+        </div>
+
+        <!-- Article content injected here -->
+        <article class="article-page" id="article-content">
+
+            <!-- Loading state -->
+            <div class="article-loading" id="article-loading">
+                <div class="container">
+                    <div class="skeleton-line wide" style="height:40px; margin-bottom:20px;"></div>
+                    <div class="skeleton-line narrow" style="margin-bottom:40px;"></div>
+                    <div class="skeleton-image" style="height:420px; border-radius:20px; margin-bottom:40px;"></div>
+                    <div class="skeleton-line wide"></div>
+                    <div class="skeleton-line medium"></div>
+                    <div class="skeleton-line wide"></div>
+                    <div class="skeleton-line narrow"></div>
+                </div>
+            </div>
+
+            <!-- Populated by JS -->
+            <div class="article-inner" id="article-inner" style="display:none;">
+                <div class="container">
+                    <div class="article-header">
+                        <h1 id="article-title"></h1>
+                        <div class="article-meta" id="article-meta"></div>
+                    </div>
+                    <div class="article-cover" id="article-cover"></div>
+                    <div class="article-body" id="article-body"></div>
+                </div>
+            </div>
+
+            <!-- Error state -->
+            <div class="article-error" id="article-error" style="display:none;">
+                <div class="container">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <h2>Article not found</h2>
+                    <p>This article may have been moved or deleted.</p>
+                    <a href="greentec.html" class="cta-btn">Back to Home</a>
+                </div>
+            </div>
+
+        </article>
+
+        <!-- Related / CTA -->
+        <section class="article-cta-section">
+            <div class="container">
+                <h3>Ready for clean energy?</h3>
+                <p>Let our team design a custom solar solution for your home or business.</p>
+                <a href="contact.html" class="cta-btn">Get a Free Quote</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 class="footer-heading">MENU</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="articles.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Working Hours</h4>
+                    <p class="footer-info">Mon - Fri: 8am - 6pm</p>
+                    <h4 class="footer-heading serving-title">Serving In</h4>
+                    <ul class="footer-links">
+                        <li>Lagos</li>
+                        <li>Abuja</li>
+                        <li>Benin</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">How Solar Works</a></li>
+                        <li><a href="articles.html">Blog</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; Copyright - Greentec Solar | 2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <!--sanity-->
+    <script>
+        const SANITY_PROJECT_ID = 'n93vwln4'; // 🔧 Replace this
+        const SANITY_DATASET = 'production';
+        const SANITY_API_VERSION = '2024-01-01';
+
+        function sanityImageUrl(ref) {
+            if (!ref) return null;
+            const parts = ref.split('-');
+            const id = parts[1];
+            const dimensions = parts[2];
+            const format = parts[3];
+            return `https://cdn.sanity.io/images/${SANITY_PROJECT_ID}/${SANITY_DATASET}/${id}-${dimensions}.${format}`;
+        }
+
+        function formatDate(dateStr) {
+            if (!dateStr) return '';
+            return new Date(dateStr).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+        }
+
+        // Convert Sanity Portable Text blocks to HTML
+        function blocksToHtml(blocks) {
+            if (!blocks || !Array.isArray(blocks)) return '';
+            return blocks.map(block => {
+                if (block._type !== 'block') return '';
+                const style = block.style || 'normal';
+                const text = (block.children || []).map(child => {
+                    let t = child.text || '';
+                    // Apply marks
+                    if (child.marks && child.marks.includes('strong')) t = `<strong>${t}</strong>`;
+                    if (child.marks && child.marks.includes('em')) t = `<em>${t}</em>`;
+                    return t;
+                }).join('');
+
+                if (style === 'h1') return `<h1>${text}</h1>`;
+                if (style === 'h2') return `<h2>${text}</h2>`;
+                if (style === 'h3') return `<h3>${text}</h3>`;
+                if (style === 'blockquote') return `<blockquote>${text}</blockquote>`;
+                return `<p>${text}</p>`;
+            }).join('\n');
+        }
+
+        async function loadArticle() {
+            const params = new URLSearchParams(window.location.search);
+            const slug = params.get('slug');
+
+            if (!slug) {
+                showError();
+                return;
+            }
+
+            const query = encodeURIComponent(
+                `*[_type == "post" && slug.current == "${slug}"][0] {
+                    title, publishedAt, body,
+                    "author": author->name,
+                    "coverImage": mainImage.asset._ref
+                }`
+            );
+            const url = `https://${SANITY_PROJECT_ID}.api.sanity.io/v${SANITY_API_VERSION}/data/query/${SANITY_DATASET}?query=${query}`;
+
+            try {
+                const res = await fetch(url);
+                const data = await res.json();
+                const post = data.result;
+
+                if (!post || !post.title) {
+                    showError();
+                    return;
+                }
+
+                // Set page title
+                document.title = `${post.title} | La Raison Green Tec`;
+
+                // Populate fields
+                document.getElementById('article-title').textContent = post.title;
+                document.getElementById('article-meta').textContent =
+                    `${formatDate(post.publishedAt)}${post.author ? ' • by ' + post.author : ''}`;
+
+                const coverEl = document.getElementById('article-cover');
+                if (post.coverImage) {
+                    coverEl.style.backgroundImage = `url('${sanityImageUrl(post.coverImage)}')`;
+                    coverEl.style.display = 'block';
+                }
+
+                document.getElementById('article-body').innerHTML = blocksToHtml(post.body);
+
+                document.getElementById('article-loading').style.display = 'none';
+                document.getElementById('article-inner').style.display = 'block';
+
+            } catch (err) {
+                console.error('Failed to load article:', err);
+                showError();
+            }
+        }
+
+        function showError() {
+            document.getElementById('article-loading').style.display = 'none';
+            document.getElementById('article-error').style.display = 'block';
+        }
+
+        loadArticle();
+    </script>
+
+</body>
+
+</html>

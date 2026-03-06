@@ -41,3 +41,7 @@
   color: white;
   border-color: #d4a337;
 }
+
+.lr-modal-trigger {
+  cursor: pointer;
+}

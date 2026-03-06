@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="greentec.css">
     <link rel="stylesheet" href="greentec-gallery.css">
     <script defer src="script.js"></script>
+    <script defer src="greentec-gallery.js"></script>
 </head>
 
 <body>
@@ -33,8 +34,8 @@
                 <ul class="ul-li">
                     <li class="hideOnMobile"><a href="index.html">Home</a></li>
                     <li class="hideOnMobile"><a href="about.html">About</a></li>
-                    <li class="hideOnMobile"><a href="furniture.html">Furniture</a></li>
-                    <li class="hideOnMobile nav-active"><a href="greentec.html">Greentec</a></li>
+                    <li class="hideOnMobile"><a href="greentec.html">Greentec</a></li>
+                    <li class="hideOnMobile nav-active"><a href="greentec-gallery.html">Greentec products</a></li>
                     <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
                     <li class="menu-btn" onclick="showsidebar()"><a href="#"><i class="fa-solid fa-bars"></i></a></li>
                 </ul>
@@ -44,96 +45,281 @@
     </header>
 
     <main>
-        <section class="hero-section">
-            <div class="slider-container">
-                <div class="slider-wrapper" id="sliderWrapper">
-                    <img src="images/Solar Investment_ So können Sie direkt in Solarenergie investieren.jpg"
-                        alt="Luxury Interior 1">
-                    <img src="images/DIY Solar System Complete Guide - DIY Solar Panels.jpg" alt="Luxury Interior 2">
-                </div>
+        <section class="catalog-hero">
+            <div class="catalog-hero-bg"></div>
+            <div class="catalog-hero-content">
+                <span class="catalog-eyebrow">GREENTEC ENERGY</span>
+                <h1>Product Catalog</h1>
+                <p>Explore our full range of premium solar panels, inverters, and battery storage systems.</p>
+                <a href="contact.html" class="cta-btn">Request a Quote</a>
             </div>
-            <div class="hero-overlay"></div>
-            <div class="hero">
-                <div class="hero-content">
-                    <h2>Seamless Energy Independence <br>for Homes and Industry.</h2>
-                    <a href="contact.html" class="cta-btn">Get a Quote</a>
-                </div>
+            <div class="catalog-hero-stats">
+                <div class="hero-stat"><strong>500+</strong><span>Projects</span></div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat"><strong>10kWh+</strong><span>Capacity</span></div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat"><strong>3 Cities</strong><span>Coverage</span></div>
             </div>
         </section>
 
         <section class="gallery-container">
-            <div class="filter-bar">
-                <button class="filter-btn active" data-filter="all">All Solutions</button>
-                <button class="filter-btn" data-filter="solar">Solar Panels</button>
-                <button class="filter-btn" data-filter="wind">Wind Tech</button>
-                <button class="filter-btn" data-filter="storage">Battery Storage</button>
+            <div class="gallery-inner">
+                <div class="filter-bar">
+                    <button class="filter-btn active" data-filter="all"><i class="fa-solid fa-border-all"></i> All
+                        Products</button>
+                    <button class="filter-btn" data-filter="solar"><i class="fa-solid fa-solar-panel"></i> Solar
+                        Panels</button>
+                    <button class="filter-btn" data-filter="storage"><i class="fa-solid fa-battery-full"></i> Battery
+                        Storage</button>
+                    <button class="filter-btn" data-filter="inverter"><i class="fa-solid fa-bolt"></i>
+                        Inverters</button>
+                    <button class="filter-btn" data-filter="kit"><i class="fa-solid fa-box"></i> Starter Kits</button>
+                </div>
+
+                <div class="results-bar">
+                    <span id="results-count">6 products</span>
+                </div>
+
+                <div class="product-grid" id="product-grid">
+
+                    <div class="gallery-card" data-category="kit" data-img="images/solar-kit.jpg"
+                        data-badge="Best Seller" data-cat="Starter Kit" data-title="Solar Starter Kit"
+                        data-price="&#8358;85,000"
+                        data-desc="A complete entry-level solar setup ideal for small homes and apartments. Includes monocrystalline panels, a pure sine wave inverter, and all mounting hardware for a clean installation."
+                        data-specs='[["Capacity","1.5kWh"],["Panel Type","Monocrystalline"],["Inverter","1kVA Pure Sine"],["Warranty","2 Years"]]'>
+                        <div class="gallery-card-image-wrap">
+                            <div class="gallery-card-img" style="background-image:url('images/solar-kit.jpg');"></div>
+                            <div class="gallery-card-overlay"><a href="contact.html" class="overlay-quote-btn">Get
+                                    Quote</a>
+                            </div>
+                            <span class="gallery-badge bestseller">Best Seller</span>
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-cat">Starter Kit</span>
+                            <h3>Solar Starter Kit</h3>
+                            <p>Complete entry-level solar setup for small homes. Includes panels, inverter and mounting
+                                hardware.</p>
+                            <div class="gallery-card-footer">
+                                <span class="gallery-price">&#8358;85,000</span>
+                                <a href="#" class="gallery-cta"
+                                    onclick="openProductModal(this.closest('.gallery-card')); return false;">View
+                                    Details <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-card" data-category="storage" data-img="images/solar-panel_2196335.png"
+                        data-cat="Battery Storage" data-title="Li-ion Storage 5kWh" data-price="&#8358;250,000"
+                        data-desc="High-performance lithium-ion battery storage providing reliable 24/7 power for homes and offices. Smart BMS protection included."
+                        data-specs='[["Capacity","5kWh"],["Chemistry","LiFePO4"],["Cycles","3000+"],["Warranty","3 Years"]]'>
+                        <div class="gallery-card-image-wrap">
+                            <div class="gallery-card-img"
+                                style="background-image:url('images/solar-panel_2196335.png');">
+                            </div>
+                            <div class="gallery-card-overlay"><a href="contact.html" class="overlay-quote-btn">Get
+                                    Quote</a>
+                            </div>
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-cat">Battery Storage</span>
+                            <h3>Li-ion Storage 5kWh</h3>
+                            <p>High-performance lithium battery storage for 24/7 power availability in homes and
+                                offices.
+                            </p>
+                            <div class="gallery-card-footer">
+                                <span class="gallery-price">&#8358;250,000</span>
+                                <a href="#" class="gallery-cta"
+                                    onclick="openProductModal(this.closest('.gallery-card')); return false;">View
+                                    Details <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-card" data-category="solar"
+                        data-img="images/SaveClip.App_611656790_18032358659753425_6235661990614392821_n.jpg"
+                        data-badge="New" data-cat="Solar Panel" data-title="Monocrystalline 400W"
+                        data-price="&#8358;120,000"
+                        data-desc="High-efficiency monocrystalline panels with anti-reflective coating and a 25-year performance warranty. Ideal for rooftop installations."
+                        data-specs='[["Power Output","400W"],["Efficiency","21.5%"],["Cell Type","Monocrystalline"],["Warranty","25 Years"]]'>
+                        <div class="gallery-card-image-wrap">
+                            <div class="gallery-card-img"
+                                style="background-image:url('images/SaveClip.App_611656790_18032358659753425_6235661990614392821_n.jpg');">
+                            </div>
+                            <div class="gallery-card-overlay"><a href="contact.html" class="overlay-quote-btn">Get
+                                    Quote</a>
+                            </div>
+                            <span class="gallery-badge new-badge">New</span>
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-cat">Solar Panel</span>
+                            <h3>Monocrystalline 400W</h3>
+                            <p>High-efficiency monocrystalline panels with 25-year performance warranty and
+                                anti-reflective
+                                coating.</p>
+                            <div class="gallery-card-footer">
+                                <span class="gallery-price">&#8358;120,000</span>
+                                <a href="#" class="gallery-cta"
+                                    onclick="openProductModal(this.closest('.gallery-card')); return false;">View
+                                    Details <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-card" data-category="inverter">
+                        <div class="gallery-card-image-wrap">
+                            <div class="gallery-card-img"
+                                style="background-image:url('images/SaveClip.App_616418300_18033444413753425_518220412795370762_n.jpg');">
+                            </div>
+                            <div class="gallery-card-overlay"><a href="contact.html" class="overlay-quote-btn">Get
+                                    Quote</a>
+                            </div>
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-cat">Inverter</span>
+                            <h3>Hybrid Inverter 5kVA</h3>
+                            <p>Smart hybrid inverter with grid-tie and off-grid capability. Compatible with lithium and
+                                lead-acid batteries.</p>
+                            <div class="gallery-card-footer">
+                                <span class="gallery-price">&#8358;180,000</span>
+                                <a href="#" class="gallery-cta"
+                                    onclick="openProductModal(this.closest('.gallery-card')); return false;">View
+                                    Details <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-card" data-category="storage">
+                        <div class="gallery-card-image-wrap">
+                            <div class="gallery-card-img"
+                                style="background-image:url('images/SaveClip.App_625051165_18034927586753425_2255944884882714345_n.jpg');">
+                            </div>
+                            <div class="gallery-card-overlay"><a href="contact.html" class="overlay-quote-btn">Get
+                                    Quote</a>
+                            </div>
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-cat">Battery Storage</span>
+                            <h3>Li-ion Storage 10kWh</h3>
+                            <p>Industrial-grade lithium battery bank ideal for commercial properties and large
+                                residential
+                                setups.</p>
+                            <div class="gallery-card-footer">
+                                <span class="gallery-price">&#8358;450,000</span>
+                                <a href="#" class="gallery-cta"
+                                    onclick="openProductModal(this.closest('.gallery-card')); return false;">View
+                                    Details <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-card" data-category="solar">
+                        <div class="gallery-card-image-wrap">
+                            <div class="gallery-card-img" style="background-image:url('images/solarr.jpg');"></div>
+                            <div class="gallery-card-overlay"><a href="contact.html" class="overlay-quote-btn">Get
+                                    Quote</a>
+                            </div>
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-cat">Solar Panel</span>
+                            <h3>Bifacial Panel 550W</h3>
+                            <p>Dual-sided panels capture reflected light from surfaces below, boosting output by up to
+                                30%.
+                            </p>
+                            <div class="gallery-card-footer">
+                                <span class="gallery-price">&#8358;195,000</span>
+                                <a href="#" class="gallery-cta"
+                                    onclick="openProductModal(this.closest('.gallery-card')); return false;">View
+                                    Details <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="no-results" id="no-results" style="display:none;">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <p>No products in this category yet.</p>
+                </div>
             </div>
+        </section>
 
-            <div class="product-grid">
-                <div class="product-card" data-category="storage">
-                    <div class="product-image-container">
-                        <img src="images/SaveClip.App_625051165_18034927586753425_2255944884882714345_n.jpg"
-                            alt="Solar Project">
-                        <div class="product-info">
-                            <a href="#" class="product-link">
-                                <h3>Industrial Solar</h3>
-                                <p>Clean Energy</p>
-                            </a>
-                        </div>
-                    </div>
+        <section class="catalog-cta-section">
+            <div class="catalog-cta-inner">
+                <div class="catalog-cta-text">
+                    <h2>Not sure what you need?</h2>
+                    <p>Our team will assess your energy needs and recommend the right solution for your budget.</p>
                 </div>
-
-                <div class="product-card" data-category="solar">
-                    <div class="product-image-container">
-                        <img src="images/SaveClip.App_611656790_18032358659753425_6235661990614392821_n.jpg"
-                            alt="Solar Project">
-                        <div class="product-info">
-                            <a href="#" class="product-link">
-                                <h3>Industrial Solar</h3>
-                                <p>Clean Energy</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-card" data-category="solar">
-                    <div class="product-image-container">
-                        <img src="images/SaveClip.App_616418300_18033444413753425_518220412795370762_n.jpg"
-                            alt="Solar Project">
-                        <div class="product-info">
-                            <a href="#" class="product-link">
-                                <h3>Industrial Solar</h3>
-                                <p>Clean Energy</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <a href="contact.html" class="cta-btn">Talk to an Expert</a>
             </div>
         </section>
     </main>
 
-    <script>
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const cards = document.querySelectorAll('.product-card');
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
 
-        filterButtons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterButtons.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
+                <div class="footer-col">
+                    <h4 class="footer-heading">MENU</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
 
-                const filter = btn.getAttribute('data-filter');
-                cards.forEach(card => {
-                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                        card.style.display = 'block';
-                        setTimeout(() => card.style.opacity = '1', 10);
-                    } else {
-                        card.style.opacity = '0';
-                        setTimeout(() => card.style.display = 'none', 300);
-                    }
-                });
-            });
-        });
-    </script>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Working Hours</h4>
+                    <p class="footer-info">Mon - Fri: 8am - 6pm</p>
+
+                    <h4 class="footer-heading serving-title">Serving In</h4>
+                    <ul class="footer-links">
+                        <li>Lagos</li>
+                        <li>Abuja</li>
+                        <li>Benin</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">How Solar Works</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">License</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; Copyright - Greentec Solar | 2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- PRODUCT DETAIL MODAL -->
+    <div class="product-modal-overlay" id="productModalOverlay" onclick="closeProductModal()">
+        <div class="product-modal" id="productModal" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeProductModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-inner">
+                <div class="modal-image" id="modalImage"></div>
+                <div class="modal-content">
+                    <div id="modalTopBadges"></div>
+                    <span class="modal-category" id="modalCategory"></span>
+                    <h2 id="modalTitle"></h2>
+                    <p class="modal-price" id="modalPrice"></p>
+                    <p class="modal-desc" id="modalDesc"></p>
+                    <div class="modal-specs" id="modalSpecs"></div>
+                    <div class="modal-actions">
+                        <a href="contact.html" class="cta-btn">Get a Quote</a>
+                        <a href="greentec-gallery.html" class="modal-catalog-link">Back to Catalog</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

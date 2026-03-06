@@ -19,8 +19,10 @@
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
     <script src="script.js" defer></script>
+
     <script src="https://kit.fontawesome.com/2c173cbe17.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script defer src="furniture.js"></script>
 </head>
 
 <body>
@@ -102,37 +104,44 @@
 
                 <div class="swiper store-swiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
+                        <div class="swiper-slide lr-modal-trigger" data-img="images/tvconsole2.JPG"
+                            data-title="Tv Console"
+                            data-desc="Sleek, handcrafted TV consoles blending storage and style. Custom sizes and finishes available to complement any living space.">
                             <div class="category-card">
                                 <img src="images/tvconsole2.JPG" alt="Tv console">
                                 <h3>Tv console</h3>
                             </div>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide lr-modal-trigger" data-img="images/door1.JPG" data-title="Door"
+                            data-desc="Bespoke interior and exterior doors crafted from premium hardwood. Designed to make a lasting first impression with refined detailing.">
                             <div class="category-card">
                                 <img src="images/door1.JPG" alt="Door">
                                 <h3>Door</h3>
                             </div>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide lr-modal-trigger" data-img="images/kitchen1.jpg" data-title="Kitchen"
+                            data-desc="Luxury kitchen cabinetry and fittings tailored to your lifestyle. From minimalist modern to warm traditional — every detail considered.">
                             <div class="category-card">
                                 <img src="images/kitchen1.jpg" alt="Cupboard">
                                 <h3>Kitchen</h3>
                             </div>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide lr-modal-trigger" data-img="images/bedroom.jpg" data-title="Bedroom"
+                            data-desc="Complete bedroom furniture solutions — from beds and nightstands to full fitted wardrobes. Crafted for comfort and elegance.">
                             <div class="category-card">
                                 <img src="images/bedroom.jpg" alt="Bedroom">
                                 <h3>Bedroom</h3>
                             </div>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide lr-modal-trigger" data-img="images/kitchen2.jpg" data-title="Kitchen"
+                            data-desc="Modern kitchen designs with intelligent storage and premium surfaces. Built to withstand daily life while looking effortlessly beautiful.">
                             <div class="category-card">
                                 <img src="images/kitchen2.jpg" alt="Kitchen">
                                 <h3>Kitchen</h3>
                             </div>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide lr-modal-trigger" data-img="images/homedecor.jpg" data-title="Cabinets"
+                            data-desc="Statement display and storage cabinets for every room. Handmade with attention to grain, finish, and form — built to be admired.">
                             <div class="category-card">
                                 <img src="images/homedecor.jpg" alt="Cabinets">
                                 <h3>Cabinets</h3>
@@ -156,68 +165,76 @@
             <div class="btn-cont">
                 <a href="gallery.html" class="view-all-btn">View All Product</a>
             </div>
-
             <div class="product-grid">
-                <div class="product-card">
+                <div class="product-card lr-modal-trigger" data-img="images/bed frame 1.JPG" data-title="Bed Frame"
+                    data-desc="Elegantly crafted bed frames built for comfort and longevity. Available in a range of finishes and sizes to suit any bedroom aesthetic.">
                     <div class="product-image-container">
                         <img src="images/bed frame 1.JPG" alt="Bed frame">
                         <div class="product-info">
-                            <a href="#" class="product-link">
+                            <a href="#" class="product-link" onclick="return false;">
                                 <h3>Bed frame</h3>
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card lr-modal-trigger" data-img="images/door2.JPG" data-title="Door"
+                    data-desc="Premium bespoke doors that combine security and sophistication. Crafted to order with custom dimensions, finishes, and hardware options.">
                     <div class="product-image-container">
                         <img src="images/door2.JPG" alt="Door">
                         <div class="product-info">
-                            <a href="#" class="product-link">
+                            <a href="#" class="product-link" onclick="return false;">
                                 <h3>Door</h3>
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card lr-modal-trigger" data-img="images/tvconsole3.JPG" data-title="Tv Console"
+                    data-desc="Designer TV units with integrated cable management and display shelving. A functional centrepiece for your living room.">
                     <div class="product-image-container">
                         <img src="images/tvconsole3.JPG" alt="Tv console">
                         <div class="product-info">
-                            <a href="#" class="product-link">
+                            <a href="#" class="product-link" onclick="return false;">
                                 <h3>Tv console</h3>
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <div class="product-card hideOnMobile">
+                <div class="product-card hideOnMobile lr-modal-trigger" data-img="images/bedframe5.JPG"
+                    data-title="Bedframe"
+                    data-desc="Sturdy, beautifully finished bedframes with optional storage drawers. Designed to be the statement piece your bedroom deserves.">
                     <div class="product-image-container">
                         <img src="images/bedframe5.JPG" alt="bedframe">
                         <div class="product-info">
-                            <a href="#" class="product-link">
+                            <a href="#" class="product-link" onclick="return false;">
                                 <h3>Bedframe</h3>
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <div class="product-card hideOnMobile">
+                <div class="product-card hideOnMobile lr-modal-trigger" data-img="images/homedecor.jpg"
+                    data-title="Cabinet"
+                    data-desc="Freestanding and wall-mounted cabinets for any room. Impeccably finished and built to organise your space with quiet luxury.">
                     <div class="product-image-container">
                         <img src="images/homedecor.jpg" alt="cabinet">
                         <div class="product-info">
-                            <a href="#" class="product-link">
+                            <a href="#" class="product-link" onclick="return false;">
                                 <h3>cabinet</h3>
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <div class="product-card hideOnMobile">
+                <div class="product-card hideOnMobile lr-modal-trigger" data-img="images/wardwrobe2.JPG"
+                    data-title="Cupboard"
+                    data-desc="Floor-to-ceiling wardrobes and cupboards tailored precisely to your space. Maximise storage without compromising on elegance.">
                     <div class="product-image-container">
                         <img src="images/wardwrobe2.JPG" alt="ward drobe">
                         <div class="product-info">
-                            <a href="#" class="product-link">
+                            <a href="#" class="product-link" onclick="return false;">
                                 <h3>Cupboard</h3>
                             </a>
                         </div>
@@ -232,7 +249,7 @@
                             style="height: 40px; display: block; margin-top: 30px;"></span>
                 </h2>
                 <p>Transform your roof into an asset with our aesthetic, high-efficiency solar installations.</p>
-                <button class="btn-gold">Read More</button>
+                <button class="btn-gold" onclick="window.location.href = 'greentec.html'">learn More</button>
             </div>
             <div class="solar-visual">
                 <img src="images/Save Money with Solar Panels – Clean Energy for Your Home.jpg"
@@ -257,7 +274,8 @@
                     <p>We source sustainable materials for production.</p>
                 </div>
                 <div class="step-card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="step-img"><img src="images/installation.jpg" alt="Installation"></div>
+                    <div class="step-img"><img src="images/Gemini_Generated_Image_8xw99k8xw99k8xw9.png"
+                            alt="Installation"></div>
                     <span class="step-num">3</span>
                     <p>Expert delivery and installation in your space.</p>
                 </div>
@@ -275,52 +293,32 @@
             </div>
 
             <div class="blog-footer-btn" data-aos="fade-up">
-                <a href="blog.html" class="view-all-btn">View All Posts</a>
+                <a href="furniture-articles.html" class="view-all-btn">View All Posts</a>
             </div>
 
-            <div class="blog-grid">
-
-                <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="blog-img-wrapper">
-                        <img src="images/SaveClip.App_616418300_18033444413753425_518220412795370762_n.jpg"
-                            alt="Minimalist Design">
-                        <span class="blog-tag">Interior</span>
-                    </div>
+            <div class="blog-grid" id="blog-grid">
+                <article class="blog-card blog-skeleton">
+                    <div class="blog-img-wrapper skeleton-box"></div>
                     <div class="blog-content">
-                        <span class="blog-date">February 12, 2026</span>
-                        <h3>The Art of Minimalist Living in Modern Homes</h3>
-                        <p>Discover how to balance functionality with a high-end aesthetic using our latest collection.
-                        </p>
-                        <a href="#" class="blog-link">Read More <i class="fa-solid fa-arrow-right-long"></i></a>
+                        <span class="skeleton-line short"></span>
+                        <span class="skeleton-line"></span>
+                        <span class="skeleton-line medium"></span>
                     </div>
                 </article>
-
-                <article class="blog-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="blog-img-wrapper">
-                        <img src="images/SaveClip.App_590575682_18029281367753425_8871272443530932508_n.jpg"
-                            alt="Sustainable Furniture">
-                        <span class="blog-tag">Sustainability</span>
-                    </div>
+                <article class="blog-card blog-skeleton">
+                    <div class="blog-img-wrapper skeleton-box"></div>
                     <div class="blog-content">
-                        <span class="blog-date">February 05, 2026</span>
-                        <h3>Why Sustainable Wood Matters for Your Home</h3>
-                        <p>Learn about our commitment to eco-friendly materials and how they benefit your environment.
-                        </p>
-                        <a href="#" class="blog-link">Read More <i class="fa-solid fa-arrow-right-long"></i></a>
+                        <span class="skeleton-line short"></span>
+                        <span class="skeleton-line"></span>
+                        <span class="skeleton-line medium"></span>
                     </div>
                 </article>
-
-                <article class="blog-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="blog-img-wrapper">
-                        <img src="images/SaveClip.App_611656790_18032358659753425_6235661990614392821_n.jpg"
-                            alt="Solar Innovation">
-                        <span class="blog-tag">Solar</span>
-                    </div>
+                <article class="blog-card blog-skeleton">
+                    <div class="blog-img-wrapper skeleton-box"></div>
                     <div class="blog-content">
-                        <span class="blog-date">January 28, 2026</span>
-                        <h3>Integrating Solar Energy into Luxury Architecture</h3>
-                        <p>Explore the seamless merge between aesthetic home design and high-efficiency solar tech.</p>
-                        <a href="#" class="blog-link">Read More <i class="fa-solid fa-arrow-right-long"></i></a>
+                        <span class="skeleton-line short"></span>
+                        <span class="skeleton-line"></span>
+                        <span class="skeleton-line medium"></span>
                     </div>
                 </article>
             </div>
@@ -396,16 +394,27 @@
         </div>
     </footer>
 
+    <!-- Product / Category Modal -->
+    <div class="lr-modal-overlay" id="lrModal" role="dialog" aria-modal="true" aria-labelledby="lrModalTitle">
+        <div class="lr-modal">
+            <button class="lr-modal-close" id="lrModalClose" aria-label="Close modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="lr-modal-img-wrap">
+                <img src="" alt="" id="lrModalImg">
+            </div>
+            <div class="lr-modal-body">
+                <h3 id="lrModalTitle"></h3>
+                <p id="lrModalDesc"></p>
+                <button class="btn-gold lr-modal-cta" onclick="window.location.href='contact.html'">
+                    Book a Consultation
+                </button>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            once: true,
-            offset: 100,
-            duration: 800,
-            easing: 'ease-out-cubic'
-        });
-    </script>
 </body>
 
 </html>

@@ -1,0 +1,212 @@
+/* =============================================
+   ARTICLE DETAIL PAGE — article.html
+   Extends furniture.css, no overrides
+   ============================================= */
+
+/* Hero — dynamically gets background-image from JS */
+.article-header {
+  height: 70vh;
+  min-height: 420px;
+  background: url('images/bedroom.jpg') center / cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: white;
+  transition: background-image 0.4s ease;
+}
+
+.article-header .hero-overlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0.1) 100%);
+}
+
+.article-hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 860px;
+  width: 100%;
+  padding: 0 5% 60px;
+  text-align: center;
+}
+
+.article-hero-content .blog-tag {
+  position: static;
+  display: inline-block;
+  margin-bottom: 18px;
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+}
+
+.article-hero-content h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  line-height: 1.15;
+  margin-bottom: 16px;
+  color: white;
+}
+
+.article-hero-content p {
+  color: rgba(255,255,255,0.7);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+/* Article body wrapper */
+.article-body-wrap {
+  max-width: 780px;
+  margin: 70px auto;
+  padding: 0 5%;
+}
+
+/* Loading skeletons */
+.article-loading {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Article rich-text content */
+.article-content p {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: rgba(0,0,0,0.75);
+  font-weight: 300;
+  margin-bottom: 24px;
+}
+
+.article-content h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--dark);
+  margin: 48px 0 20px;
+  line-height: 1.2;
+}
+
+.article-content h3 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--dark);
+  margin: 36px 0 16px;
+}
+
+.article-content h4 {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin: 28px 0 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.article-content blockquote {
+  border-left: 3px solid var(--gold);
+  margin: 40px 0;
+  padding: 20px 30px;
+  background: var(--cream);
+  border-radius: 0 8px 8px 0;
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--dark);
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+}
+
+.article-content strong {
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.article-content em {
+  font-style: italic;
+}
+
+.article-figure {
+  margin: 40px 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.article-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Related posts */
+.related-section {
+  padding: 60px 8% 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.related-section .section-header {
+  margin-bottom: 40px;
+}
+
+.related-grid {
+  margin-top: 0;
+}
+
+/* Back link */
+.article-back-wrap {
+  max-width: 780px;
+  margin: 0 auto 80px;
+  padding: 0 5%;
+}
+
+.article-back {
+  font-size: 0.9rem;
+  gap: 12px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.article-back i {
+  transition: transform 0.3s ease;
+}
+
+.article-back:hover i {
+  transform: translateX(-4px);
+}
+
+@media (max-width: 768px) {
+  .article-header {
+    height: 55vh;
+  }
+  .article-hero-content {
+    padding: 0 20px 40px;
+  }
+  .article-body-wrap {
+    margin: 50px auto;
+    padding: 0 20px;
+  }
+  .article-content p {
+    font-size: 1rem;
+  }
+  .article-content blockquote {
+    padding: 16px 20px;
+    font-size: 1.1rem;
+  }
+  .related-section {
+    padding: 40px 20px;
+  }
+  .article-back-wrap {
+    padding: 0 20px;
+    margin-bottom: 60px;
+  }
+}
