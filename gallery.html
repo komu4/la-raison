@@ -15,7 +15,7 @@
         href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300&family=Outfit:wght@200;400;600&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/2c173cbe17.js" crossorigin="anonymous"></script>
-
+    <script src="gallery.js" defer></script>
 </head>
 
 <body>
@@ -55,7 +55,7 @@
         <div class="filter-bar">
             <button class="filter-btn active" data-filter="all">All</button>
             <button class="filter-btn" data-filter="door">Door</button>
-            <button class="filter-btn" data-filter="wardrobe">Cabinent</button>
+            <button class="filter-btn" data-filter="wardrobe">Wardrobe</button>
             <button class="filter-btn" data-filter="bedroom">bedroom</button>
             <button class="filter-btn" data-filter="kitchen">Kitchen</button>
             <button class="filter-btn" data-filter="tv-console">TV console</button>
@@ -105,7 +105,7 @@
                 data-title="Kitchen"
                 data-desc="Modern kitchen designs with intelligent storage and premium surfaces. Built to withstand daily life while looking effortlessly beautiful.">
                 <div class="product-image-container">
-                    <img src="images/kitchen2.jpg" alt="kitchen">
+                    <img src="images/kitchen new].jpg" alt="kitchen">
                     <div class="product-info">
                         <a href="#" class="product-link" onclick="return false;">
                             <h3>Kitchen</h3>
@@ -347,74 +347,6 @@
         </div>
     </div>
 
-    <script>
-        const filterButtons = document.querySelectorAll(".filter-btn");
-        const cards = document.querySelectorAll(".product-card");
-
-        filterButtons.forEach((btn) => {
-            btn.addEventListener("click", () => {
-                filterButtons.forEach((b) => b.classList.remove("active"));
-                btn.classList.add("active");
-
-                const filter = btn.getAttribute("data-filter");
-                cards.forEach((card) => {
-                    if (filter === "all" || card.getAttribute("data-category") === filter) {
-                        card.style.display = "block";
-                    } else {
-                        card.style.display = "none";
-                    }
-                });
-            });
-        });
-
-        (function () {
-            const overlay = document.getElementById("lrModal");
-            const closeBtn = document.getElementById("lrModalClose");
-            const modalImg = document.getElementById("lrModalImg");
-            const modalTitle = document.getElementById("lrModalTitle");
-            const modalDesc = document.getElementById("lrModalDesc");
-
-            function openModal(img, title, desc) {
-                modalImg.src = img;
-                modalImg.alt = title;
-                modalTitle.textContent = title;
-                modalDesc.textContent = desc;
-                overlay.classList.add("lr-modal-open");
-                document.body.style.overflow = "hidden";
-            }
-
-            function closeModal() {
-                overlay.classList.remove("lr-modal-open");
-                document.body.style.overflow = "";
-            }
-
-            // Delegated click — works on Swiper's cloned slides too
-            document.addEventListener("click", function (e) {
-                const trigger = e.target.closest(".lr-modal-trigger");
-                if (trigger) {
-                    e.preventDefault();
-                    openModal(
-                        trigger.dataset.img,
-                        trigger.dataset.title,
-                        trigger.dataset.desc,
-                    );
-                }
-            });
-
-            closeBtn.addEventListener("click", closeModal);
-
-            // Click outside the modal card closes it
-            overlay.addEventListener("click", function (e) {
-                if (e.target === overlay) closeModal();
-            });
-
-            // Escape key closes it
-            document.addEventListener("keydown", function (e) {
-                if (e.key === "Escape") closeModal();
-            });
-        })();
-
-    </script>
 </body>
 
 </html>
