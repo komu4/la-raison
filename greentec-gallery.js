@@ -32,12 +32,14 @@ filterButtons.forEach((btn) => {
 });
 
 function showsidebar() {
-  document.getElementById("sideBar").style.display = "flex";
-  document.getElementById("sidebarOverlay").style.display = "block";
+  document.getElementById("sideBar").classList.add("active");
+  document.getElementById("sidebarOverlay").classList.add("active");
+  document.body.style.overflow = "hidden";
 }
 function hideSideBar() {
-  document.getElementById("sideBar").style.display = "none";
-  document.getElementById("sidebarOverlay").style.display = "none";
+  document.getElementById("sideBar").classList.remove("active");
+  document.getElementById("sidebarOverlay").classList.remove("active");
+  document.body.style.overflow = "";
 }
 
 //modal

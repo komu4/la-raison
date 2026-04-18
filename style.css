@@ -270,22 +270,6 @@ nav li.nav-active a {
   display: block;
   opacity: 1;
 }
-
-/* Responsive Navbar */
-@media (max-width: 850px) {
-  .hideOnMobile {
-    display: none;
-  }
-
-  .menu-btn {
-    display: block;
-  }
-
-  .fixed-la {
-    display: none;
-  }
-}
-
 /* ---------- HERO CONTENT ---------- */
 .hero-section {
   position: relative;
@@ -347,7 +331,6 @@ nav li.nav-active a {
   max-width: var(--max-width);
   margin: auto;
   display: grid;
-  /* CHANGED: Reduced 260px to 250px for safety */
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 3rem;
 }
@@ -470,8 +453,8 @@ nav li.nav-active a {
 }
 
 .card-2 {
-  border: 1px solid rgba(0, 0, 255, 0.566);
-  border-top: 3px solid blue;
+  border: 1px solid #236b50;
+  border-top: 3px solid #1a5c43;
 }
 
 .luxury-card:hover {
@@ -479,37 +462,6 @@ nav li.nav-active a {
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
   background: #ffffff;
 }
-
-/* ---------- RESPONSIVE FIXES ---------- */
-@media (max-width: 768px) {
-  .luxury-card {
-    padding: 40px 25px;
-  }
-
-  .service-flex {
-    gap: 40px;
-  }
-}
-
-@media (max-width: 480px) {
-  .service-flex,
-  .us-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .luxury-card {
-    padding: 30px 20px;
-  }
-
-  .card-logo img {
-    margin-bottom: 20px;
-  }
-
-  .card-image {
-    margin-bottom: 20px;
-  }
-}
-
 /* --- TYPOGRAPHY INSIDE CARDS --- */
 .card-logo img {
   height: 40px;
@@ -665,5 +617,75 @@ nav li.nav-active a {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Responsive Navbar */
+@media (max-width: 850px) {
+  .hideOnMobile {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .fixed-la {
+    display: none;
+  }
+}
+/* ---------- RESPONSIVE FIXES ---------- */
+@media (max-width: 768px) {
+  .luxury-card {
+    padding: 40px 25px;
+  }
+
+  .service-flex {
+    gap: 40px;
+  }
+
+  section {
+    padding: 3rem 6%;
+  }
+
+  header {
+    min-height: 60vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-flex,
+  .us-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .luxury-card {
+    padding: 30px 20px;
+  }
+
+  .card-logo img {
+    margin-bottom: 20px;
+  }
+
+  .card-image {
+    margin-bottom: 20px;
+  }
+
+  .footer-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+
+  .side-bar {
+    width: 80%;
+  }
+
+  .us-grid,
+  .service-flex {
+    grid-template-columns: 1fr;
   }
 }

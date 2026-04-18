@@ -8,34 +8,45 @@
     <meta name="description" content="Solar energy articles, guides and project case studies from La Raison GreenTec.">
     <link rel="icon" href="images/LA RAISON LOGIMARK GOLD.png">
     <link rel="stylesheet" href="greentec.css">
+    <link rel="stylesheet" href="article.css">
     <script src="https://kit.fontawesome.com/2c173cbe17.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Outfit:wght@200;300;400;600&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Outfit:wght@200;300;400;600&display=swap"
+        rel="stylesheet">
     <script src="greentec.js" defer></script>
 </head>
 
 <body>
 
     <!-- ===== NAVBAR ===== -->
-    <nav class="navbar">
-        <a href="index.html" class="nav-logo">
-            <img src="images/LA RAISON GREENTEC BLACK 2.png" alt="La Raison Greentec Logo" class="logo-img">
-            <div class="logo-text">
-                <span class="logo-main">La <span class="logo-serif">Raison</span></span>
-                <span class="logo-sub">GREENTEC</span>
+    <nav>
+        <section class="nav-container">
+            <div class="sidebar-overlay" id="sidebarOverlay"></div>
+            <ul class="side-bar" id="sideBar">
+                <li onclick="hideSideBar()"><a href="#"><i class="fa-solid fa-xmark"></i></a></li>
+                <li><a href="index.html" class="nav-active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="furniture.html">Furniture</a></li>
+                <li><a href="greentec.html">Greentec</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="logo"><a href="greentec.html"><img src="images/GREENTEC GOLD.png" alt="Logo"></a>
             </div>
-        </a>
-        <button class="hamburger" id="hamburger" aria-label="Open menu">
-            <span></span><span></span><span></span>
-        </button>
-        <ul class="nav-links" id="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="greentec-gallery.html">Products</a></li>
-            <li><a href="articles.html" class="active">Articles</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
-        </ul>
+            <ul class="ul-li">
+                <li class="hideOnMobile "><a href="index.html">Home</a></li>
+                <li class="hideOnMobile"><a href="about.html">About</a></li>
+                <li class="hideOnMobile"><a href="furniture.html">Furniture</a></li>
+                <li class="hideOnMobile nav-active"><a href="greentec.html">Greentec</a></li>
+                <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+                <li class="menu-btn" onclick="showsidebar()"><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+            </ul>
+        </section>
     </nav>
+
 
     <!-- ===== ARTICLE HERO — populated by JS ===== -->
     <section class="article-hero" id="article-hero">
@@ -75,7 +86,9 @@
 
     <!-- ===== BACK TO ARTICLES ===== -->
     <div style="background:var(--green-dark);padding:0 5% 4rem;max-width:1200px;margin:0 auto;">
-        <a href="articles.html" style="display:inline-flex;align-items:center;gap:0.5rem;color:var(--gold);font-size:0.9rem;font-weight:600;transition:gap 0.3s ease;" onmouseover="this.style.gap='0.9rem'" onmouseout="this.style.gap='0.5rem'">
+        <a href="articles.html"
+            style="display:inline-flex;align-items:center;gap:0.5rem;color:var(--gold);font-size:0.9rem;font-weight:600;transition:gap 0.3s ease;"
+            onmouseover="this.style.gap='0.9rem'" onmouseout="this.style.gap='0.5rem'">
             <i class="fa-solid fa-arrow-left"></i> Back to All Articles
         </a>
     </div>
@@ -115,4 +128,5 @@
     </footer>
 
 </body>
+
 </html>

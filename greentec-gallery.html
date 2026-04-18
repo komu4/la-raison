@@ -12,7 +12,7 @@
     <script src="https://kit.fontawesome.com/2c173cbe17.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="greentec.css">
     <link rel="stylesheet" href="greentec-gallery.css">
-    <script defer src="script.js"></script>
+    <script defer src="greentec.js"></script>
     <script defer src="greentec-gallery.js"></script>
 </head>
 
@@ -20,7 +20,7 @@
     <header>
         <nav>
             <section class="nav-container">
-                <div class="sidebar-overlay" id="sidebarOverlay"></div>
+                <div class="sidebar-overlay" id="sidebarOverlay" onclick="hideSideBar()"></div>
                 <ul class="side-bar" id="sideBar">
                     <li onclick="hideSideBar()"><a href="#"><i class="fa-solid fa-xmark"></i></a></li>
                     <li><a href="index.html">Home</a></li>
@@ -39,7 +39,6 @@
                     <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
                     <li class="menu-btn" onclick="showsidebar()"><a href="#"><i class="fa-solid fa-bars"></i></a></li>
                 </ul>
-                <a href="contact.html" class="cta-btn hideOnMobile">Get a Quote</a>
             </section>
         </nav>
     </header>

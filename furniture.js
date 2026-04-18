@@ -82,7 +82,7 @@ AOS.init({
 
   function renderCard(post, delay) {
     const slug = post.slug?.current || "#";
-    const href = `article.html?slug=${slug}`;
+    const href = `furniture-article.html?slug=${slug}`;
     const date = post.publishedAt ? formatDate(post.publishedAt) : "";
     const imgSrc = post.imageUrl
       ? `${post.imageUrl}?w=800&q=80&auto=format`
